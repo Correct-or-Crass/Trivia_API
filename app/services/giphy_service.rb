@@ -5,10 +5,7 @@ class GiphyService
       search.params['q'] = phrase
       search.params['rating'] = rating
     end
-
-    if response.status == 200
-      parse_jason(response) 
-    end
+      parse_json(response) 
   end
 
     def self.conn

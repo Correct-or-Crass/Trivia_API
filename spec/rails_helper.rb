@@ -74,6 +74,7 @@ end
 RSpec.configure do |config|
   # add `FactoryBot` methods
   config.include FactoryBot::Syntax::Methods
+end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
@@ -81,5 +82,3 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
-
-
