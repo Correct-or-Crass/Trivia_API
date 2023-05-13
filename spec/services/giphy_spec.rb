@@ -23,6 +23,8 @@ RSpec.describe 'Giphy Service' do
 
       it 'responds with pagination>count & meta>status in integer datatypes' do
         expect(@response[:pagination][:count]).to be_a(Integer)
+       
+        #default response limit is set to 20
         expect(@response[:pagination][:count]).to eq(20)
         
         expect(@response[:meta][:status]).to be_a(Integer)

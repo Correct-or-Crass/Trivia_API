@@ -9,8 +9,9 @@ RSpec.describe 'Giphy Facade' do
 
       it 'returns an array containing a hash with  url, title, rating key-value pairs' do
         expect(@response).to be_a(Array)
+        expect(@response.count).to eq(1)
+
         expect(@response[0]).to be_a(Hash)
-        
         expect(@response[0].keys).to eq([:url, :title, :rating])
         expect(@response[0][:url]).to be_a(String)
         expect(@response[0][:title]).to be_a(String)
