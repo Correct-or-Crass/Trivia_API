@@ -4,7 +4,7 @@ RSpec.describe 'Giphy Facade' do
   describe 'Happy Path' do
     context 'responses with gif data count > 0', :vcr do
       before do
-        @response = GiphyFacade.mean_or_nice("If I throw a stick, will you leave?", "r")
+        @response = GiphyFacade.mean_or_nice("If I throw a stick, will you leave?")
       end 
 
       it 'returns an array containing a hash with  url, title, rating key-value pairs' do
@@ -16,6 +16,15 @@ RSpec.describe 'Giphy Facade' do
         expect(@response[0][:url]).to be_a(String)
         expect(@response[0][:title]).to be_a(String)
         expect(@response[0][:rating]).to be_a(String)
+      end
+    end
+
+    context 'responses with gif data count > 0', :vcr do
+      before do
+        @response = GiphyFacade.mean_or_nice()
+      end 
+    
+      it 'returns an array containing a hash with  url, title, rating key-value pairs' do
       end
     end
   end

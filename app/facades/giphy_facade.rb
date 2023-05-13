@@ -1,5 +1,5 @@
 class GiphyFacade
-  def self.mean_or_nice(phrase, rating)
+  def self.mean_or_nice(phrase)
     response = GiphyService.gif_search(phrase)
 
     if response[:data].count > 0        
