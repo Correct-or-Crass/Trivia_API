@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.giphy.com/v1/gifs/search?api_key=<GIPHY_api_key>&q=&rating=r
+    uri: https://api.giphy.com/v1/gifs/search?api_key=<GIPHY_api_key>&limit=20&q=&rating=r
     body:
       encoding: US-ASCII
       string: ''
@@ -55,23 +55,23 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 10 May 2023 18:40:20 GMT
+      - Sat, 13 May 2023 16:45:07 GMT
       Age:
       - '0'
       Cache-Control:
       - max-age=30
       X-Served-By:
-      - cache-iad-kjyo7100134-IAD, cache-nyc-kteb1890027-NYC
+      - cache-iad-kiad7000047-IAD, cache-nyc-kteb1890030-NYC
       X-Cache-Hits:
       - 0, 0
       X-Timer:
-      - S1683744021.857171,VS0,VE22
+      - S1683996307.009770,VS0,VE17
       Vary:
       - Accept-Encoding
       Strict-Transport-Security:
       - max-age=15465600
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[],"pagination":{"total_count":0,"count":0,"offset":0},"meta":{"status":200,"msg":"OK","response_id":"znpmdjwlszv3zyypmk4yt0lwwoxd53uh3nb3nsk2"}}'
-  recorded_at: Wed, 10 May 2023 18:40:20 GMT
+      string: '{"data":[],"pagination":{"total_count":0,"count":0,"offset":0},"meta":{"status":200,"msg":"OK","response_id":"or2f4bf2h87dsooebkjvumnkgkn5eoh83ote3x4e"}}'
+  recorded_at: Sat, 13 May 2023 16:45:07 GMT
 recorded_with: VCR 6.1.0

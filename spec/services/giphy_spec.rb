@@ -4,7 +4,7 @@ RSpec.describe 'Giphy Service' do
   describe 'Happy Path' do
     context 'responses with gif data count > 0', :vcr do
       before do
-        @response = GiphyService.gif_search("If I throw a stick, will you leave?", "r")
+        @response = GiphyService.gif_search("If I throw a stick, will you leave?")
       end 
 
       it 'responds with high level keys: data, pagination, meta' do
@@ -23,7 +23,7 @@ RSpec.describe 'Giphy Service' do
 
       it 'responds with pagination>count & meta>status in integer datatypes' do
         expect(@response[:pagination][:count]).to be_a(Integer)
-        expect(@response[:pagination][:count]).to eq(50)
+        expect(@response[:pagination][:count]).to eq(20)
         
         expect(@response[:meta][:status]).to be_a(Integer)
         expect(@response[:meta][:status]).to eq(200)
@@ -48,7 +48,7 @@ RSpec.describe 'Giphy Service' do
     context 'responses with gif data count == 0', :vcr do
       before do
         phrase = '' #note: illistrating that no phrase is passed
-        @response = GiphyService.gif_search(phrase,"r")
+        @response = GiphyService.gif_search(phrase)
       end
 
       it 'responds with high level keys (data, pagination, meta) and their values' do

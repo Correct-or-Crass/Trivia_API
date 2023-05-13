@@ -1,8 +1,6 @@
-class Api::V1::TriviaApiController < ApplicationController
+class Api::V1::TriviaApisController < ApplicationController
   def index
-    
-    phrase = ChatGPTFacade.method("ok")
-    rating = "r"
-    gifs = GiphyFacade.mean_or_nice(phrase,rating)
+    phrase = # needed from other api call
+    gifs = GiphyFacade.mean_or_nice(phrase)
   end
 end

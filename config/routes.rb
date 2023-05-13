@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
+  # resources :trivia, only: :index
+  
   namespace :api do
     namespace :v1 do
-      resources :trivia_api, only: :index
+      resources :trivia_apis, only: :index
     end
   end
 end
