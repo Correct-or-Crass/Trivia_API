@@ -23,5 +23,4 @@ class GiphyFacade
       rating: data[:rating].to_json
       }
   end
-
 end
