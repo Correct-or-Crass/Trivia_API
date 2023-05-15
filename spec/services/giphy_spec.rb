@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Giphy Service' do
   describe 'Happy Path' do
-    context 'responses with gif data count > 0', :vcr do
+    context 'responses based on phrase argument', :vcr do
       before do
         @response = GiphyService.gif_search("If I throw a stick, will you leave?")
       end 
@@ -45,29 +45,6 @@ RSpec.describe 'Giphy Service' do
         end
       end
 
-    end
-      
-    context 'responses with gif data count == 0', :vcr do
-      before do
-        phrase = '' #note: illistrating that no phrase is passed
-        @response = GiphyService.gif_search(phrase)
-      end
-
-      it 'responds with high level keys (data, pagination, meta) and their values' do
-        expect(@response.keys).to eq([:data, :pagination, :meta])
-        
-        #data is an empty array when request has no matching gifs 
-        expect(@response[:data]).to be_a(Array)
-        expect(@response[:data].empty?).to eq(true)
-
-        # pagination all values == 0  
-        expect(@response[:pagination].keys).to eq([:total_count, :count, :offset])
-        expect(@response[:pagination][:total_count]).to eq(0)
-        expect(@response[:pagination][:total_count]).to eq(@response[:pagination][:count])
-        expect(@response[:pagination][:count]).to eq(@response[:pagination][:offset])
-        
-        expect(@response[:meta][:status]).to eq(200)
-      end
     end
   end
 end

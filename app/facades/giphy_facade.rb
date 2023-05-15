@@ -2,13 +2,16 @@ class GiphyFacade
   def self.mean_or_nice(phrase)
     response = GiphyService.gif_search(phrase)
 
-    if response[:data].count > 0        
-      giphy_response = response[:data].find do |gif|  
-        return selected_data_from_response(gif) if gif[:rating] == 'r'
-        return selected_data_from_response(gif) if gif[:rating] == 'pg' || gif[:rating] == 'g'
-      end              
-    else
-      #plan to insert game logo
+    response[:data].find do |gif|  
+    #hierarchy: select based on ratings 'r'or 'pg' when available
+      if gif[:rating] == "r"
+        return selected_data_from_response(gif) 
+      elsif
+        gif[:rating] == "pg"
+        return selected_data_from_response(gif) 
+      else
+        return selected_data_from_response(gif) 
+      end        
     end
   end
 

@@ -19,12 +19,13 @@ RSpec.describe 'Giphy Facade' do
       end
     end
 
-    context 'responses with gif data count > 0', :vcr do
+    context 'responses with gif data count is 0', :vcr do
       before do
-        @response = GiphyFacade.mean_or_nice()
+        @response = GiphyFacade.mean_or_nice("")
       end 
     
-      it 'returns an array containing a hash with  url, title, rating key-value pairs' do
+      it 'returns the logo' do
+        require 'pry';binding.pry
       end
     end
   end
