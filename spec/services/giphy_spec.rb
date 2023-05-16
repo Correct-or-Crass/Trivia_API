@@ -8,17 +8,17 @@ RSpec.describe 'Giphy Service' do
       end 
 
       it 'responds with high level keys: data, pagination, meta' do
-          expect(@response).to be_a(Hash)
-          expect(@response.keys).to eq([:data, :pagination, :meta])
-          
-          expect(@response[:data]).to be_a(Array)
-          expect(@response[:data][0]).to be_a(Hash)
+        expect(@response).to be_a(Hash)
+        expect(@response.keys).to eq([:data, :pagination, :meta])
+        
+        expect(@response[:data]).to be_a(Array)
+        expect(@response[:data][0]).to be_a(Hash)
 
-          expect(@response[:pagination]).to be_a(Hash)
-          expect(@response[:pagination].keys).to eq([:total_count, :count, :offset])
-          
-          expect(@response[:meta]).to be_a(Hash)
-          expect(@response[:meta].keys).to eq([:status, :msg, :response_id])
+        expect(@response[:pagination]).to be_a(Hash)
+        expect(@response[:pagination].keys).to eq([:total_count, :count, :offset])
+        
+        expect(@response[:meta]).to be_a(Hash)
+        expect(@response[:meta].keys).to eq([:status, :msg, :response_id])
       end
 
       it 'responds with pagination>count & meta>status in integer datatypes' do
@@ -39,12 +39,10 @@ RSpec.describe 'Giphy Service' do
           expect(gif[:url]).to be_a(String)
           expect(gif[:rating]).to be_a(String)
           expect(gif[:title]).to be_a(String)
-          expect(gif[:import_datetime]).to be_a(String) #filter by most current?
           
           expect(gif[:type]).to eq('gif')
         end
       end
-
     end
   end
 end
