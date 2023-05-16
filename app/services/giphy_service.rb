@@ -1,6 +1,6 @@
 class GiphyService
   def self.gif_search(phrase)
-    limit = 20
+    limit = 20  # setting as default for now;
     response = conn.get("/v1/gifs/search") do |search|
       search.params["q"] = phrase
       search.params["limit"] = limit
@@ -9,8 +9,7 @@ class GiphyService
   end
 
   def self.conn
-    rating = "r"  # setting as default for now; can be changed in the future based on gametype 
-    limit = 20   # setting as default for now;
+    rating = "r"  # setting as default for now; can be edited based on game level (easy, med, hard)
     Faraday.new("https://api.giphy.com") do |connect|
       connect.params["api_key"] = ENV["giphy_api_key"]
       connect.params["rating"] = rating
