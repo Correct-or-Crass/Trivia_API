@@ -1,0 +1,566 @@
+  [1m[35m (0.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Trivia_API_development"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Trivia_API_test"[0m
+  [1m[35m (360.6ms)[0m  [1m[35mCREATE DATABASE "Trivia_API_development" ENCODING = 'unicode'[0m
+  [1m[35m (107.1ms)[0m  [1m[35mCREATE DATABASE "Trivia_API_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2722703429927113500)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-12 16:26:53.233555"], ["updated_at", "2023-05-12 16:26:53.233555"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2722703429927113500)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/words" for ::1 at 2023-05-12 12:40:18 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 22474ms (ActiveRecord: 0.0ms | Allocations: 35385)
+
+
+  
+JSON::ParserError (unexpected token at 'Error 404: Not Found'):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 12:40:50 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 1556ms (ActiveRecord: 0.0ms | Allocations: 976)
+
+
+  
+JSON::ParserError (unexpected token at 'Error 404: Not Found'):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/trivia" for ::1 at 2023-05-12 12:41:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/trivia"):
+  
+Started GET "/api/v1/trivias" for ::1 at 2023-05-12 12:41:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/trivias"):
+  
+Started GET "/api/v1/trivias" for ::1 at 2023-05-12 12:41:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/trivias"):
+  
+Started GET "/api/v1/trivia_apis" for ::1 at 2023-05-12 12:41:34 -0600
+  
+Zeitwerk::NameError (expected file /Users/janiceweaver/5Mod/Trivia_API/app/controllers/api/v1/trivia_apis_controller.rb to define constant Api::V1::TriviaApisController, but didn't):
+  
+zeitwerk (2.6.8) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.8) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.3) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 12:41:46 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 1093ms (ActiveRecord: 0.0ms | Allocations: 933)
+
+
+  
+JSON::ParserError (unexpected token at 'Error 404: Not Found'):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:04:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /Users/janiceweaver/5Mod/Trivia_API/app/controllers/api/v1/words_controller.rb to define constant Api::V1::WordsController, but didn't):
+  
+zeitwerk (2.6.8) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.8) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.3) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:11:25 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /Users/janiceweaver/5Mod/Trivia_API/app/controllers/api/v1/words_controller.rb to define constant Api::V1::WordsController, but didn't):
+  
+zeitwerk (2.6.8) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.8) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.3) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:11:32 -0600
+  
+ActionController::RoutingError (uninitialized constant Api::V1::WordsController):
+  
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:12:03 -0600
+  
+Zeitwerk::NameError (expected file /Users/janiceweaver/5Mod/Trivia_API/app/controllers/api/v1/words_controller.rb to define constant Api::V1::WordsController, but didn't):
+  
+zeitwerk (2.6.8) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.8) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.3) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:12:14 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 952ms (ActiveRecord: 0.0ms | Allocations: 3789)
+
+
+  
+JSON::ParserError (unexpected token at 'Error 404: Not Found'):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:12:32 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 38455ms (ActiveRecord: 0.0ms | Allocations: 39984)
+
+
+  
+SystemExit (exit):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:13:25 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 34986ms (ActiveRecord: 0.0ms | Allocations: 19900)
+
+
+  
+SystemExit (exit):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:21:37 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 2673)
+
+
+  
+ArgumentError (bad argument (expected URI object or URI string)):
+  
+app/services/word_service.rb:3:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:23:20 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 171364ms (ActiveRecord: 0.0ms | Allocations: 53539)
+
+
+  
+SystemExit (exit):
+  
+app/services/word_service.rb:3:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-12 13:26:42 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 84333ms (ActiveRecord: 0.0ms | Allocations: 49100)
+
+
+  
+SystemExit (exit):
+  
+app/services/word_service.rb:3:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:51:22 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms | Allocations: 2358)
+
+
+  
+NameError (undefined local variable or method `conn' for WordService:Class):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:52:44 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+  
+NameError (undefined local variable or method `conn' for WordService:Class):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:52:59 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 6950ms (ActiveRecord: 0.0ms | Allocations: 25181)
+
+
+  
+ArgumentError (bad argument (expected URI object or URI string)):
+  
+app/services/word_service.rb:4:in `conn'
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:53:13 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 316)
+
+
+  
+ArgumentError (bad argument (expected URI object or URI string)):
+  
+app/services/word_service.rb:4:in `conn'
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:53:37 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 78487ms (ActiveRecord: 0.0ms | Allocations: 28513)
+
+
+  
+SystemExit (exit):
+  
+app/services/word_service.rb:3:in `conn'
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:55:01 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 0.0ms | Allocations: 1067)
+
+
+  
+NoMethodError (undefined method `get' for #<Faraday::Response:0x0000000112af7cc0 @on_complete_callbacks=[], @env=#<Faraday::Env @method=:get @url=#<URI::HTTPS https://shielded-headland-00998.herokuapp.com> @request=#<Faraday::RequestOptions (empty)> @request_headers={"User-Agent"=>"Faraday v2.7.4"} @ssl=#<Faraday::SSLOptions verify=true> @response=#<Faraday::Response:0x0000000112af7cc0 ...> @response_headers={"connection"=>"keep-alive", "content-type"=>"text/html; charset=UTF-8", "content-length"=>"1722", "x-request-id"=>"e19f7569-72d9-45dd-bff8-0655ba050ff3", "x-runtime"=>"0.001655", "server"=>"WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)", "date"=>"Sat, 13 May 2023 10:55:01 GMT", "via"=>"1.1 vegur"} @status=404 @reason_phrase="Not Found" @response_body="<!DOCTYPE html>\n<html>\n<head>\n  <title>The page you were looking for doesn't exist (404)</title>\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <style>\n  .rails-default-error-page {\n    background-color: #EFEFEF;\n    color: #2E2F30;\n    text-align: center;\n    font-family: arial, sans-serif;\n    margin: 0;\n  }\n\n  .rails-default-error-page div.dialog {\n    width: 95%;\n    max-width: 33em;\n    margin: 4em auto 0;\n  }\n\n  .rails-default-error-page div.dialog > div {\n    border: 1px solid #CCC;\n    border-right-color: #999;\n    border-left-color: #999;\n    border-bottom-color: #BBB;\n    border-top: #B00100 solid 4px;\n    border-top-left-radius: 9px;\n    border-top-right-radius: 9px;\n    background-color: white;\n    padding: 7px 12% 0;\n    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);\n  }\n\n  .rails-default-error-page h1 {\n    font-size: 100%;\n    color: #730E15;\n    line-height: 1.5em;\n  }\n\n  .rails-default-error-page div.dialog > p {\n    margin: 0 0 1em;\n    padding: 1em;\n    background-color: #F7F7F7;\n    border: 1px solid #CCC;\n    border-right-color: #999;\n    border-left-color: #999;\n    border-bottom-color: #999;\n    border-bottom-left-radius: 4px;\n    border-bottom-right-radius: 4px;\n    border-top-color: #DADADA;\n    color: #666;\n    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);\n  }\n  </style>\n</head>\n\n<body class=\"rails-default-error-page\">\n  <!-- This file lives in public/404.html -->\n  <div class=\"dialog\">\n    <div>\n      <h1>The page you were looking for doesn't exist.</h1>\n      <p>You may have mistyped the address or the page may have moved.</p>\n    </div>\n    <p>If you are the application owner check the logs for more information.</p>\n  </div>\n</body>\n</html>\n">>):
+  
+app/services/word_service.rb:8:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:55:15 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 41744ms (ActiveRecord: 0.0ms | Allocations: 25651)
+
+
+  
+SystemExit (exit):
+  
+app/services/word_service.rb:9:in `word_search'
+app/facades/word_facade.rb:3:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:56:03 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 70300ms (ActiveRecord: 0.0ms | Allocations: 11398)
+
+
+  
+SystemExit (exit):
+  
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:57:23 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 225)
+
+
+  
+SyntaxError (/Users/janiceweaver/5Mod/Trivia_API/app/facades/word_facade.rb:8: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/facades/word_facade.rb:8: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/facades/word_facade.rb:8: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:57:37 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 12940ms (ActiveRecord: 0.0ms | Allocations: 11422)
+
+
+  
+SystemExit (exit):
+  
+app/facades/word_facade.rb:5:in `block in find_word'
+app/facades/word_facade.rb:4:in `each'
+app/facades/word_facade.rb:4:in `map'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 04:58:44 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 132799ms (ActiveRecord: 0.0ms | Allocations: 24176)
+
+
+  
+SystemExit (exit):
+  
+app/poros/word.rb:4:in `initialize'
+app/facades/word_facade.rb:5:in `new'
+app/facades/word_facade.rb:5:in `block in find_word'
+app/facades/word_facade.rb:4:in `each'
+app/facades/word_facade.rb:4:in `map'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 05:01:31 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 73185ms (ActiveRecord: 0.0ms | Allocations: 16795)
+
+
+  
+SystemExit (exit):
+  
+app/poros/word.rb:4:in `initialize'
+app/facades/word_facade.rb:5:in `new'
+app/facades/word_facade.rb:5:in `block in find_word'
+app/facades/word_facade.rb:4:in `each'
+app/facades/word_facade.rb:4:in `map'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 05:03:03 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 0.0ms | Allocations: 1339)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/poros/word.rb:4:in `initialize'
+app/facades/word_facade.rb:5:in `new'
+app/facades/word_facade.rb:5:in `block in find_word'
+app/facades/word_facade.rb:4:in `each'
+app/facades/word_facade.rb:4:in `map'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 05:04:42 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 0.0ms | Allocations: 1335)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/poros/word.rb:4:in `initialize'
+app/facades/word_facade.rb:5:in `new'
+app/facades/word_facade.rb:5:in `block in find_word'
+app/facades/word_facade.rb:4:in `each'
+app/facades/word_facade.rb:4:in `map'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 05:08:31 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 30414ms (ActiveRecord: 0.0ms | Allocations: 9278)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/api/v1/words_controller.rb:6:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 05:09:07 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 204 No Content in 318ms (ActiveRecord: 0.0ms | Allocations: 1252)
+
+
+Started GET "/api/v1/words" for ::1 at 2023-05-13 05:09:15 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 204 No Content in 299ms (ActiveRecord: 0.0ms | Allocations: 1036)
+
+
+Started GET "/api/v1/words" for ::1 at 2023-05-13 08:45:22 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WordsController#index as */*
+Completed 500 Internal Server Error in 106831ms (ActiveRecord: 0.0ms | Allocations: 47753)
+
+
+  
+SystemExit (exit):
+  
+app/poros/word.rb:4:in `initialize'
+app/facades/word_facade.rb:5:in `new'
+app/facades/word_facade.rb:5:in `block in find_word'
+app/facades/word_facade.rb:4:in `each'
+app/facades/word_facade.rb:4:in `map'
+app/facades/word_facade.rb:4:in `find_word'
+app/controllers/api/v1/words_controller.rb:5:in `index'
+Started GET "/api/v1/words" for ::1 at 2023-05-13 08:49:24 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 204 No Content in 363ms (ActiveRecord: 0.0ms | Allocations: 1292)
+
+
+Started GET "/api/v1/words" for ::1 at 2023-05-13 08:49:49 -0600
+Processing by Api::V1::WordsController#index as */*
+Completed 204 No Content in 394ms (ActiveRecord: 0.0ms | Allocations: 1041)
+
+
