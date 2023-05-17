@@ -1,18 +1,27 @@
 class GiphyFacade
-  def self.mean_or_nice(phrase, rating)
-    response = GiphyService.gif_search(phrase,rating)
+  def self.mean_or_nice(phrase)
+    response = GiphyService.gif_search(phrase)
 
-    if response[:data].count > 0        
-      giphy_response = response[:data].find do |gif|  
-        return selected_data_from_response(gif) if gif[:rating] == 'r'
-        return selected_data_from_response(gif) if gif[:rating] == 'pg' || gif[:rating] == 'g'
-      end              
-    else
-      #plan to insert game logo
+    r_rated   = Array.new
+    pg_rated  = Array.new 
+    g_rated   = Array.new
+
+    response[:data].each do |gif|
+      r_rated << hash_of_url_title_rating(gif) if gif[:rating] == "r"
+      pg_rated << hash_of_url_title_rating(gif) if gif[:rating] == "pg" || gif[:rating] == "pg-13"
+      g_rated << hash_of_url_title_rating(gif) if gif[:rating] == "g"
+    end
+
+    if r_rated.present?
+      return r_rated.sample
+    elsif pg_rated.present?
+      return pg_rated.sample
+    elsif g_rated.present?
+      return g_rated.sample
     end
   end
 
-  def self.selected_data_from_response(data)
+  def self.hash_of_url_title_rating(data)
     gif_data = []
       gif_data << {
       url:    data[:url].to_json,
@@ -20,5 +29,4 @@ class GiphyFacade
       rating: data[:rating].to_json
       }
   end
-
 end
