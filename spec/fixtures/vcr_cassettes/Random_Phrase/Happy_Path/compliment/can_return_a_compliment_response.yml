@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/compliments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a6018b3746790a953c0072b3d4fa5e9e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 998ee812-fa68-4f15-b23a-148ecc4d4c80
+      X-Runtime:
+      - '0.002867'
+      Server:
+      - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
+      Date:
+      - Fri, 12 May 2023 20:35:57 GMT
+      Content-Length:
+      - '135'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"21","type":"compliment","attributes":{"compliment_phrase":"Who
+        raised you? They deserve a medal for a job well done."}}}'
+  recorded_at: Fri, 12 May 2023 20:35:57 GMT
+recorded_with: VCR 6.1.0
