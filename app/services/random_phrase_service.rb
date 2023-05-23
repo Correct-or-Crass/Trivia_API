@@ -1,5 +1,5 @@
-class RandomPhrase 
-    def generate_phrase(type)
+class RandomPhraseService 
+    def self.generate_phrase(type)
         response = conn.get("api/v1/#{type}")
         parse_json(response)
     end

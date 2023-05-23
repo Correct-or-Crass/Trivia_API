@@ -1,37 +1,25 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/janiceweaver/5Mod/Trivia_API/app/facades/word_facade.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/random_phrase_service.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/janiceweaver/5Mod/Trivia_API/app/services/word_service.rb": {
-        "lines": [
-          1,
-          1,
-          null,
           1,
           null,
           null,
           1,
           1,
           null,
+          null,
+          1,
           1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1683991788
+    "timestamp": 1684857575
   }
 }

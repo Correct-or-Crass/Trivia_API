@@ -8,6 +8,7 @@ RSpec.describe 'Giphy Service' do
       end 
 
       it 'responds with high level keys: data, pagination, meta' do
+        # require 'pry';binding.pry
         expect(@response).to be_a(Hash)
         expect(@response.keys).to eq([:data, :pagination, :meta])
         
