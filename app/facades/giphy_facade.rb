@@ -29,4 +29,21 @@ class GiphyFacade
       rating: data[:rating].to_json
       }
   end
+
+    def word_length_filter(string)
+      split_s = string.split(' ')
+
+      phrase_arr = []
+
+      split_s.select do |word| 
+          if phrase_arr.join(' ').length < 40
+
+              if word.length > 3
+                  phrase_arr << word
+              end
+          end
+      end
+
+      phrase_arr.join(' ')
+    end
 end
