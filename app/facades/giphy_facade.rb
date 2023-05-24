@@ -1,6 +1,7 @@
 class GiphyFacade
   def self.mean_or_nice(phrase)
-    response = GiphyService.gif_search(phrase)
+    search_phrase = word_length_filter(phrase)
+    response = GiphyService.gif_search(search_phrase)
 
     r_rated   = Array.new
     pg_rated  = Array.new 
@@ -30,20 +31,14 @@ class GiphyFacade
       }
   end
 
-    def word_length_filter(string)
-      split_s = string.split(' ')
+  def self.word_length_filter(string)
+    phrase_arr = []
 
-      phrase_arr = []
-
-      split_s.select do |word| 
-          if phrase_arr.join(' ').length < 40
-
-              if word.length > 3
-                  phrase_arr << word
-              end
-          end
+    string.split(" ").select do |word| 
+      unless phrase_arr.join(" ").length > 40
+        phrase_arr << word if word.length > 3
       end
-
-      phrase_arr.join(' ')
     end
+    phrase_arr.join(" ")
+  end
 end
