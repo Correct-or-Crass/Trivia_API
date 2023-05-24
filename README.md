@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-### This app is in the developmental phase. please see "Project Status" for more information
+### This app is in the developmental phase. Please see "Project Status" for more information
 
 <br>
 <a name="table-of-contents"></a>
@@ -20,7 +20,7 @@
 <details close>
   <summary>Project Status</summary>
     <ul>
-      <u>May 24 update</u>
+      May 24 update
       <li> ReadMe: initial draft created </li> 
       <li> GiphyFacade: method selecting longest words from phrase in progress </li> 
     </ul>
