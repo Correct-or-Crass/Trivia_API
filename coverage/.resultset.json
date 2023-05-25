@@ -6,13 +6,13 @@
           1,
           1,
           1,
-          1,
-          0,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1685040805
+    "timestamp": 1685042631
   }
 }
