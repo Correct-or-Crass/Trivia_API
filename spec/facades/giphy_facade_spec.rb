@@ -39,13 +39,14 @@ RSpec.describe 'Giphy Facade' do
       end
     end
 
-    context "search phrase and it's words have character constraints", :vcr do
+    context "search_phrase has character length constraints" do
       before(:each) do 
         @phrase = "The discovery of the dinosaur skeleton has cast light on why they became extinct."
         @search_phrase = GiphyFacade.word_length_filter(@phrase)
       end
       
       it "selects words from the phrase argument passed in to create the search_phrase string" do
+        expect(@phrase).to be_a(String)
         expect(@search_phrase).to be_a(String)
 
         @search_phrase.split(" ").each do |word|
@@ -53,22 +54,15 @@ RSpec.describe 'Giphy Facade' do
         end
       end
 
-      it "the search_phrase is limited to words with 4 or more characters" do
+      it "limits the search_phrase lenght to less than 50 characters regardless of the phrase's length" do
+        expect(@phrase.length).to be > (50)
+        expect(@search_phrase.length).to_not be > (50)
+      end
+
+      it "words that make up the search_phrase are 4 or more characters" do
         @search_phrase.split(" ").each do |word|
           expect(word.length).to be > (3) 
         end
-      end
-
-      it "limits the search_phrase to less than 50 characters regardless of the phrase's length" do
-        # phrase_1 = "How much wood would a woodchuck chuck if a woodchuck could chuck wood?"
-        # search_phrase_1 = GiphyFacade.word_length_filter(phrase_1)
-
-        phrase_2 = "Which wristwatches are Swiss wristwatches?"
-        search_phrase_2 = GiphyFacade.word_length_filter(phrase_2)
-
-        expect(@phrase.length).to be > (50)
-        expect(@search_phrase.length).to_not be > (50)
-        require 'pry';binding.pry
       end
     end
   end

@@ -32,12 +32,13 @@ class GiphyFacade
   end
 
   def self.word_length_filter(string)
-    phrase_arr = []
+    phrase_arr = Array.new
 
     string.split(" ").select do |word| 
-      unless phrase_arr.join(" ").length > 40
+      if phrase_arr.join(" ").length < 40
         phrase_arr << word if word.length > 3
       end
+      phrase_arr
     end
     phrase_arr.join(" ")
   end
