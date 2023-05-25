@@ -1,37 +1,16 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/facades/word_facade.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/facades/photo_facade.rb": {
         "lines": [
           1,
           1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/services/word_service.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
           1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1685026645
+    "timestamp": 1685033611
   }
 }

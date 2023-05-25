@@ -5,6 +5,7 @@ class WordService
   end
 
   def self.word_search
+    
     response = conn.get("/api/v1/words")
     # require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true) 
