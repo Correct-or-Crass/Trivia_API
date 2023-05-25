@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words
     body:
       encoding: US-ASCII
       string: ''
@@ -35,25 +35,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"80539367c7be035e43511029d259f7b8"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0c261bcb-458d-4530-b738-19ae00da97ed
+      - db3f5fce-f8a3-4014-8596-99ddd9298b33
       X-Runtime:
-      - '0.004112'
+      - '0.028453'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Thu, 25 May 2023 19:22:33 GMT
+      - Thu, 25 May 2023 18:39:09 GMT
       Content-Length:
-      - '65'
+      - '11'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"55","type":"word","attributes":{"word":"Wood"}}]}'
-  recorded_at: Thu, 25 May 2023 19:22:33 GMT
+      string: '{"data":[]}'
+  recorded_at: Thu, 25 May 2023 18:39:09 GMT
 - request:
     method: get
     uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=4
@@ -89,23 +89,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2acbbdb6a860f9b82aacf5358a6431af"
+      - W/"aa4494f363c7c475dc2d3dc18a0b4321"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f05197c5-07e4-4a75-bb24-2aa03372c1df
+      - 0c406bcf-d9e9-45b6-9c44-0a863cb26e8c
       X-Runtime:
-      - '0.004550'
+      - '0.003885'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Thu, 25 May 2023 19:22:33 GMT
+      - Thu, 25 May 2023 18:39:09 GMT
       Content-Length:
-      - '236'
+      - '233'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"4","type":"word","attributes":{"word":"Steak"}},{"id":"35","type":"word","attributes":{"word":"Mine"}},{"id":"47","type":"word","attributes":{"word":"Pocket"}},{"id":"87","type":"word","attributes":{"word":"Wardance"}}]}'
-  recorded_at: Thu, 25 May 2023 19:22:33 GMT
+      string: '{"data":[{"id":"7","type":"word","attributes":{"word":"Street"}},{"id":"51","type":"word","attributes":{"word":"Garden"}},{"id":"22","type":"word","attributes":{"word":"Jeans"}},{"id":"1","type":"word","attributes":{"word":"Card"}}]}'
+  recorded_at: Thu, 25 May 2023 18:39:09 GMT
 recorded_with: VCR 6.1.0
