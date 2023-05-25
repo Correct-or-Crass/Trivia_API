@@ -8,7 +8,10 @@ RSpec.describe 'Words Api' do
     
     it "creates a new word from api" do
       expect(@word).to be_a(String)
+      expect(@word).to_be capitalize 
+      within('@word') do
+        expect( all('.find_word').count ).to eq(1)
+      end
     end
-
   end
 end
