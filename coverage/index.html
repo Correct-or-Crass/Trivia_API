@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-24T21:26:01-04:00">2023-05-24T21:26:01-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-25T08:57:25-06:00">2023-05-25T08:57:25-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  95.12%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         13.05
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>41</b> relevant lines,
-    <span class="green"><b>39</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed. </span>
+    <b>10</b> relevant lines,
+    <span class="green"><b>10</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  95.12%
+  100.0%
 </span>
 )
   </div>
@@ -71,24 +71,24 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#6ee7f737e76cc26ed22d302b720610d15a54cba6" class="src_link" title="app/facades/giphy_facade.rb">app/facades/giphy_facade.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">92.59 %</td>
-            <td class="cell--number">45</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">25</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">18.56</td>
+            <td class="strong t-file__name"><a href="#c0d46d5d7088304758c5706b159c9536de9ac236" class="src_link" title="app/facades/word_facade.rb">app/facades/word_facade.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#3fe90790f31c3b20916ec8fcb0e7819b06686e47" class="src_link" title="app/services/giphy_service.rb">app/services/giphy_service.rb</a></td>
+            <td class="strong t-file__name"><a href="#0484ee642919e4fe9155e3d04c5e0276323389c6" class="src_link" title="app/services/word_service.rb">app/services/word_service.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.43</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -109,535 +109,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="6ee7f737e76cc26ed22d302b720610d15a54cba6">
+        <div class="source_table" id="c0d46d5d7088304758c5706b159c9536de9ac236">
   <div class="header">
-    <h3>app/facades/giphy_facade.rb</h3>
-    <h4>
-      <span class="green">
-  92.59%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>27</b> relevant lines.
-      <span class="green"><b>25</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class GiphyFacade</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.mean_or_nice(phrase)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="3">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    search_phrase = word_length_filter(phrase)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="4">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    response = GiphyService.gif_search(search_phrase)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="6">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    r_rated   = Array.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="7">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    pg_rated  = Array.new </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="8">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    g_rated   = Array.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="10">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    response[:data].each do |gif|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="60" data-linenumber="11">
-            <span class="hits">60</span>
-            
-
-            
-
-            <code class="ruby">      r_rated &lt;&lt; hash_of_url_title_rating(gif) if gif[:rating] == &quot;r&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="60" data-linenumber="12">
-            <span class="hits">60</span>
-            
-
-            
-
-            <code class="ruby">      pg_rated &lt;&lt; hash_of_url_title_rating(gif) if gif[:rating] == &quot;pg&quot; || gif[:rating] == &quot;pg-13&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="60" data-linenumber="13">
-            <span class="hits">60</span>
-            
-
-            
-
-            <code class="ruby">      g_rated &lt;&lt; hash_of_url_title_rating(gif) if gif[:rating] == &quot;g&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="16">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    if r_rated.present?</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      return r_rated.sample</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="18">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    elsif pg_rated.present?</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="19">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      return pg_rated.sample</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby">    elsif g_rated.present?</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">      return g_rated.sample</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.hash_of_url_title_rating(data)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="60" data-linenumber="26">
-            <span class="hits">60</span>
-            
-
-            
-
-            <code class="ruby">    gif_data = []</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="60" data-linenumber="27">
-            <span class="hits">60</span>
-            
-
-            
-
-            <code class="ruby">      gif_data &lt;&lt; {</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">      url:    data[:url].to_json,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">      title:  data[:title].to_json,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">      rating: data[:rating].to_json</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">      }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.word_length_filter(string)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="35">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">    phrase_arr = Array.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="37">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">    string.split(&quot; &quot;).select do |word| </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="53" data-linenumber="38">
-            <span class="hits">53</span>
-            
-
-            
-
-            <code class="ruby">      if phrase_arr.join(&quot; &quot;).length &lt; 40</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="47" data-linenumber="39">
-            <span class="hits">47</span>
-            
-
-            
-
-            <code class="ruby">        phrase_arr &lt;&lt; word if word.length &gt; 3</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="53" data-linenumber="41">
-            <span class="hits">53</span>
-            
-
-            
-
-            <code class="ruby">      phrase_arr</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="43">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">    phrase_arr.join(&quot; &quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="3fe90790f31c3b20916ec8fcb0e7819b06686e47">
-  <div class="header">
-    <h3>app/services/giphy_service.rb</h3>
+    <h3>app/facades/word_facade.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -649,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>14</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -668,7 +142,7 @@
 
             
 
-            <code class="ruby">class GiphyService</code>
+            <code class="ruby">class WordFacade</code>
           </li>
         </div>
       
@@ -679,51 +153,51 @@
 
             
 
-            <code class="ruby">  def self.gif_search(phrase)</code>
+            <code class="ruby">  def self.find_word</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="3">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    limit = 20  # setting as default for now;</code>
+            <code class="ruby">    response = WordService.word_search</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="4">
-            <span class="hits">3</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
 
-            <code class="ruby">    response = conn.get(&quot;/v1/gifs/search&quot;) do |search|</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="5">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      search.params[&quot;q&quot;] = phrase</code>
+            <code class="ruby">    response[:data][:attributes][:word]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="6">
-            <span class="hits">3</span>
+          <li class="never" data-hits="" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">      search.params[&quot;limit&quot;] = limit</code>
+            <code class="ruby">      # response.map do |r|</code>
           </li>
         </div>
       
@@ -734,18 +208,18 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">      # Word.new(r)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="8">
-            <span class="hits">3</span>
+          <li class="never" data-hits="" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">      parse_json(response) </code>
+            <code class="ruby">      # end</code>
           </li>
         </div>
       
@@ -767,12 +241,54 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="0484ee642919e4fe9155e3d04c5e0276323389c6">
+  <div class="header">
+    <h3>app/services/word_service.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class WordService</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="2">
             <span class="hits">1</span>
             
 
@@ -783,62 +299,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="12">
-            <span class="hits">3</span>
+          <li class="never" data-hits="" data-linenumber="3">
+            
             
 
             
 
-            <code class="ruby">    rating = &quot;r&quot;  # setting as default for now; can be edited based on game level (easy, med, hard)</code>
+            <code class="ruby">    # require &#39;pry&#39;; binding.pry</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="13">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    Faraday.new(&quot;https://api.giphy.com&quot;) do |connect|</code>
+            <code class="ruby">   response =  Faraday.new(&quot;https://shielded-headland-00998.herokuapp.com&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="14">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">      connect.params[&quot;api_key&quot;] = ENV[&quot;giphy_api_key&quot;]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="15">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">      connect.params[&quot;rating&quot;] = rating</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
@@ -849,7 +332,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -860,29 +343,51 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
+          <li class="covered" data-hits="1" data-linenumber="7">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def self.parse_json(response)</code>
+            <code class="ruby">  def self.word_search</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="20">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
+            <code class="ruby">    response = conn.get(&quot;/api/v1/words&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    # require &#39;pry&#39;; binding.pry</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    JSON.parse(response.body, symbolize_names: true) </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -893,7 +398,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
