@@ -38,5 +38,32 @@ RSpec.describe 'Giphy Facade' do
         expect(barney_response[0][:rating]).to eq(("pg").to_json)
       end
     end
+
+    context "search_phrase has character length constraints" do
+      before(:each) do 
+        @phrase = "The discovery of the dinosaur skeleton has cast light on why they became extinct."
+        @search_phrase = GiphyFacade.word_length_filter(@phrase)
+      end
+      
+      it "selects words from the phrase argument passed in to create the search_phrase string" do
+        expect(@phrase).to be_a(String)
+        expect(@search_phrase).to be_a(String)
+
+        @search_phrase.split(" ").each do |word|
+          expect(@phrase.include?(word)).to eq(true)
+        end
+      end
+
+      it "limits the search_phrase lenght to less than 50 characters regardless of the phrase's length" do
+        expect(@phrase.length).to be > (50)
+        expect(@search_phrase.length).to_not be > (50)
+      end
+
+      it "words that make up the search_phrase are 4 or more characters" do
+        @search_phrase.split(" ").each do |word|
+          expect(word.length).to be > (3) 
+        end
+      end
+    end
   end
 end
