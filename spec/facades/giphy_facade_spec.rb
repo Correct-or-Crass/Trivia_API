@@ -5,7 +5,7 @@ RSpec.describe 'Giphy Facade' do
     context 'responses with gif data count > 0', :vcr do      
       it 'returns an array containing a hash with  url, title, rating key-value pairs' do
         response = GiphyFacade.mean_or_nice("If I throw a stick, will you leave?")
-        
+      
         expect(response).to be_a(Array)
         expect(response.count).to eq(1)
 

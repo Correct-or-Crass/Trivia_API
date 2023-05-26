@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Random Phrase' do 
+RSpec.describe 'Random Phrase Service' do 
     describe 'Happy Path' do 
         context 'insult', :vcr do 
             before do 
