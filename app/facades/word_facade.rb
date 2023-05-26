@@ -3,8 +3,13 @@ class WordFacade
     response = WordService.word_search
 
     response[:data][:attributes][:word]
-      # response.map do |r|
-      # Word.new(r)
-      # end
+   
+  end
+
+  def self.multi_word_search(num)
+    responses = WordService.multi_word(num)    
+    responses.map do |response|
+      Word.new(response)
+    end
   end
 end
