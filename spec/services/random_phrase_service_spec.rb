@@ -15,7 +15,7 @@ RSpec.describe 'Random Phrase Service' do
                 expect(@response[:data].keys).to eq [:id, :type, :attributes]
 
                 expect(@response[:data][:id]).to be_a String
-                expect(@response[:data][:id]).to eq '32' #VCR makes periodic calls to the endpoint to ref
+                expect(@response[:data][:id]).to eq '32' 
 
                 expect(@response[:data][:type]).to be_a String
                 expect(@response[:data][:type]).to eq 'insult'
