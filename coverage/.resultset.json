@@ -1,82 +1,28 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/facades/giphy_facade.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/facades/endgame_facade.rb": {
         "lines": [
           1,
-          1,
-          1,
-          1,
           null,
-          1,
-          1,
-          1,
           null,
-          1,
-          20,
-          20,
-          20,
           null,
           null,
           1,
           0,
-          1,
-          1,
           0,
+          null,
           0,
           null,
           null,
           null,
           1,
-          20,
-          20,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          8,
-          8,
-          null,
-          8,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/giphy_service.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
+          2,
           null,
           null
         ]
       }
     },
-    "timestamp": 1685133677
+    "timestamp": 1685136705
   }
 }
