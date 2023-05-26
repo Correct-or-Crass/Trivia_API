@@ -18,6 +18,6 @@ class EndgameFacade
   end
 
   def self.score_percentage(rounds_won, total_rounds = 5)
-    (correct_answers.to_f/total_questions.to_f) * 100
+    (rounds_won.to_f/total_rounds.to_f) * 100
   end
 end

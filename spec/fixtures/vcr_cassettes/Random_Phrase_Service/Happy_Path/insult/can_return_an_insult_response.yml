@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/insults
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ecc203a360f4777e57601e995039da13"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03ffcfbc-76ea-4a93-9e3b-c011e37835d0
+      X-Runtime:
+      - '0.003428'
+      Server:
+      - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
+      Date:
+      - Fri, 26 May 2023 22:22:08 GMT
+      Content-Length:
+      - '117'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"32","type":"insult","attributes":{"insult_phrase":"You
+        have miles to go before you reach mediocre."}}}'
+  recorded_at: Fri, 26 May 2023 22:22:08 GMT
+recorded_with: VCR 6.1.0
