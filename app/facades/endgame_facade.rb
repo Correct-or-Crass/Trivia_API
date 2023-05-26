@@ -5,9 +5,9 @@ class EndgameFacade
 
   def self.find_phrase_type(percentage)
     if percentage >= 60.0
-      return compliment
+      return "compliment"
     else
-      return insult
+      return "insult"
     end
   end
 
