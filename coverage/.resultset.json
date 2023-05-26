@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/janiceweaver/5Mod/Trivia_API/spec/services/giphy_spec.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/spec/services/giphy_spec.rb": {
         "lines": [
           1,
           null,
@@ -54,7 +54,7 @@
           null
         ]
       },
-      "/Users/janiceweaver/5Mod/Trivia_API/spec/services/random_phrase_spec.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/spec/services/random_phrase_spec.rb": {
         "lines": [
           1,
           null,
@@ -111,7 +111,7 @@
           null
         ]
       },
-      "/Users/janiceweaver/5Mod/Trivia_API/spec/services/words_spec.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/spec/services/words_spec.rb": {
         "lines": [
           1,
           null,
@@ -152,7 +152,7 @@
           null
         ]
       },
-      "/Users/janiceweaver/5Mod/Trivia_API/app/facades/giphy_facade.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/facades/giphy_facade.rb": {
         "lines": [
           1,
           1,
@@ -201,7 +201,7 @@
           null
         ]
       },
-      "/Users/janiceweaver/5Mod/Trivia_API/app/services/giphy_service.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/giphy_service.rb": {
         "lines": [
           1,
           1,
@@ -227,7 +227,7 @@
           null
         ]
       },
-      "/Users/janiceweaver/5Mod/Trivia_API/app/services/random_phrase_service.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/random_phrase_service.rb": {
         "lines": [
           1,
           1,
@@ -245,7 +245,7 @@
           null
         ]
       },
-      "/Users/janiceweaver/5Mod/Trivia_API/app/services/word_service.rb": {
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/word_service.rb": {
         "lines": [
           1,
           1,
@@ -266,6 +266,6 @@
         ]
       }
     },
-    "timestamp": 1685116793
+    "timestamp": 1685133275
   }
 }
