@@ -11,16 +11,19 @@ RSpec.describe 'Words Api' do
       expect(@word).to be_a Hash
       expect(@word.keys).to eq [:data]
 
-      expect(@word[:data]).to be_a Hash
-      expect(@word[:data].keys).to eq [:id, :type, :attributes]
+      expect(@word[:data]).to be_an Array
+      expect(@word[:data][0].count).to eq 3
+      expect(@word[:data].count).to eq 1
 
-      expect(@word[:data][:id]).to be_a String
-      expect(@word[:data][:type]).to be_a String
-      expect(@word[:data][:type]).to eq 'word'
+      expect(@word[:data][0].keys).to eq [:id, :type, :attributes]
 
-      expect(@word[:data][:attributes]).to be_a Hash
-      expect(@word[:data][:attributes].keys).to eq [:word]
-      expect(@word[:data][:attributes].values).to be_an Array
+      expect(@word[:data][0][:id]).to be_a String
+      expect(@word[:data][0][:type]).to be_a String
+      expect(@word[:data][0][:type]).to eq 'word'
+
+      expect(@word[:data][0][:attributes]).to be_a Hash
+      expect(@word[:data][0][:attributes].keys).to eq [:word]
+      expect(@word[:data][0][:attributes].values).to be_an Array
     end
 
     it "can return multiple words" do
