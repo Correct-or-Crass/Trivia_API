@@ -7,11 +7,9 @@ class WordFacade
   end
 
   def self.multi_word_search(num)
-    response = WordService.multi_word(num)
-    words = []
-    
-    response.map do |r|
-      Word.new(r)
+    responses = WordService.multi_word(num)    
+    responses.map do |response|
+      Word.new(response)
     end
   end
 end
