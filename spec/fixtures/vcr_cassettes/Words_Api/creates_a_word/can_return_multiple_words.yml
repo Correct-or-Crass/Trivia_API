@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=
     body:
       encoding: US-ASCII
       string: ''
@@ -35,25 +35,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"a7f1b85911651b2e9eb28e23bbe2a776"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - db3f5fce-f8a3-4014-8596-99ddd9298b33
+      - dbf1b307-dc0a-4bf6-99d7-41d54a79deaf
       X-Runtime:
-      - '0.028453'
+      - '0.041147'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Thu, 25 May 2023 18:39:09 GMT
+      - Fri, 26 May 2023 15:59:53 GMT
       Content-Length:
-      - '11'
+      - '69'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Thu, 25 May 2023 18:39:09 GMT
+      string: '{"data":[{"id":"136","type":"word","attributes":{"word":"Bowling"}}]}'
+  recorded_at: Fri, 26 May 2023 15:59:53 GMT
 - request:
     method: get
     uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=4
@@ -89,23 +89,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"aa4494f363c7c475dc2d3dc18a0b4321"
+      - W/"a2ccbe57e2fc125be470e3d823f3bff9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0c406bcf-d9e9-45b6-9c44-0a863cb26e8c
+      - 1dec6e43-7bec-4387-abdd-6c15b1155d95
       X-Runtime:
-      - '0.003885'
+      - '0.005539'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Thu, 25 May 2023 18:39:09 GMT
+      - Fri, 26 May 2023 15:59:53 GMT
       Content-Length:
-      - '233'
+      - '242'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"word","attributes":{"word":"Street"}},{"id":"51","type":"word","attributes":{"word":"Garden"}},{"id":"22","type":"word","attributes":{"word":"Jeans"}},{"id":"1","type":"word","attributes":{"word":"Card"}}]}'
-  recorded_at: Thu, 25 May 2023 18:39:09 GMT
+      string: '{"data":[{"id":"61","type":"word","attributes":{"word":"Card"}},{"id":"97","type":"word","attributes":{"word":"Salmonella"}},{"id":"96","type":"word","attributes":{"word":"Backpack"}},{"id":"85","type":"word","attributes":{"word":"School"}}]}'
+  recorded_at: Fri, 26 May 2023 15:59:53 GMT
 recorded_with: VCR 6.1.0
