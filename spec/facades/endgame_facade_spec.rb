@@ -35,5 +35,18 @@ RSpec.describe 'Endgame Facade' do
         expect(type_4).to eq("insult")
       end
     end
+
+    context 'return results', :vcr do 
+      it 'can return a collection of phrase and gif based on score results' do 
+        wins = 3
+        rounds = 5
+        phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
+
+        expect(phrase_and_gif).to be_an Array 
+        expect(phrase_and_gif.count).to eq 2 
+        expect(phrase_and_gif.first).to be_a String
+        expect(phrase_and_gif.last).to be_an Array
+      end  
+    end 
   end
 end
