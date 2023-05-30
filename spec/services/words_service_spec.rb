@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe 'Words Api' do
+RSpec.describe 'Words Api Service' do
   context "creates a word", :vcr do
     before do
      @word = WordService.word_search

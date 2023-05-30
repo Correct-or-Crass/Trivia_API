@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b7f09f4f2cbd9132b3d211f32106c365"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 43115d77-fbf5-43ea-b3a3-1af8cfb2505b
+      X-Runtime:
+      - '0.003841'
+      Server:
+      - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
+      Date:
+      - Fri, 26 May 2023 22:20:04 GMT
+      Content-Length:
+      - '69'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"116","type":"word","attributes":{"word":"Dungeon"}}]}'
+  recorded_at: Fri, 26 May 2023 22:20:04 GMT
+- request:
+    method: get
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1eee37cdbf43f6691eace458275681bb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2edeae87-9eea-4b1d-8d68-f3e98182c106
+      X-Runtime:
+      - '0.003847'
+      Server:
+      - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
+      Date:
+      - Fri, 26 May 2023 22:20:04 GMT
+      Content-Length:
+      - '239'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"26","type":"word","attributes":{"word":"Tragedy"}},{"id":"13","type":"word","attributes":{"word":"Plate"}},{"id":"120","type":"word","attributes":{"word":"Print"}},{"id":"111","type":"word","attributes":{"word":"Garden"}}]}'
+  recorded_at: Fri, 26 May 2023 22:20:04 GMT
+recorded_with: VCR 6.1.0
