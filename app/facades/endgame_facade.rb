@@ -2,9 +2,19 @@ class EndgameFacade
   #to do:
   #create class method that searchs for phrase and gif
     #method will need to take an argument (rounds_won, total_rounds (optional))
+  def self.get_phrase_and_gif(wins, rounds)
+    percentage = score_percentage(wins, rounds)
+    type = find_phrase_type(percentage)
+    phrase = get_endgame_phrase(type)
+    gif = GiphyFacade.mean_or_nice(phrase)
+    [phrase, gif]
+  end
 
   #helper method will get the phrase
-    # make phrase service call with the #find_phrase_type 
+    # make phrase service call with the #find_phrase_type
+  def self.get_endgame_phrase(type) 
+
+  end
 
   # helper method will get the gif
     #pass phrase to giphy facade
