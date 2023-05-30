@@ -7,10 +7,13 @@ class EndgameFacade
     [phrase, gif]
   end
 
-#  api seems to be down - phrase is currently a hardcoded string with desired code commented out 
   def self.get_endgame_phrase(type)
-    # RandomPhraseService.generate_phrase(type)
-    "Everything would be better if more people were like you!"
+    endgame_phrase = RandomPhraseService.generate_phrase(type)
+    if endgame_phrase[:data][:type] == "compliment"
+      endgame_phrase[:data][:attributes][:compliment_phrase]
+    elsif endgame_phrase[:data][:type] == "insult"
+      endgame_phrase[:data][:attributes][:insult_phrase]
+    end
   end
 
   def self.get_endgame_gif(phrase)
@@ -19,9 +22,9 @@ class EndgameFacade
 
   def self.find_phrase_type(percentage)
     if percentage >= 60.0
-      return "compliment"
+      return "compliments"
     else
-      return "insult"
+      return "insults"
     end
   end
 
