@@ -28,3 +28,12 @@ coverage/.resultset.json
 coverage/index.html
 # Ignore application configuration
 /config/application.yml
+
+# Conflicting files
+coverage/.resultset.json
+coverage/index.html
+log/test.log
+tmp/cache/bootsnap/load-path-cache
+
+tmp/cache/bootsnap/compile-cache-iseq/27/899a75441e00d6
+.DS_Store
