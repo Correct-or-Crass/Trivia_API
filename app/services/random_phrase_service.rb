@@ -1,14 +1,8 @@
+require "./lib/modules/serviceable.rb"
+
 class RandomPhraseService 
     def self.generate_phrase(type)
-        response = conn.get("api/v1/#{type}")
-        parse_json(response)
-    end
-
-    def self.conn 
-        Faraday.new('https://shielded-headland-00998.herokuapp.com')
-    end
-
-    def self.parse_json(response)
-        JSON.parse(response.body, symbolize_names: true)
+        response = Serviceable.phrases_words_connection.get("api/v1/#{type}")
+        Serviceable.parse_json(response) 
     end
 end

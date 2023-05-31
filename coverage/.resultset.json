@@ -304,21 +304,40 @@
       "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/giphy_service.rb": {
         "lines": [
           1,
+          null,
+          1,
+          1,
           1,
           6,
           6,
+          null,
+          6,
+          null,
+          6,
+          6,
+          6,
           6,
           6,
           null,
           6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/lib/modules/serviceable.rb": {
+        "lines": [
+          1,
+          1,
+          12,
           null,
           null,
           1,
           6,
-          6,
-          6,
-          6,
-          null,
           null,
           null,
           1,
@@ -330,16 +349,10 @@
       "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/random_phrase_service.rb": {
         "lines": [
           1,
-          1,
-          2,
-          2,
-          null,
           null,
           1,
-          2,
-          null,
-          null,
           1,
+          2,
           2,
           null,
           null
@@ -348,24 +361,22 @@
       "/Users/sergioazcona/Desktop/projects/correct_or_crass/Trivia_API/app/services/word_service.rb": {
         "lines": [
           1,
+          null,
           1,
-          4,
+          1,
+          1,
+          2,
+          2,
           null,
           null,
           1,
           2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
           2,
           null,
           null
         ]
       }
     },
-    "timestamp": 1685140142
+    "timestamp": 1685492400
   }
 }
