@@ -1,7 +1,6 @@
 require "./lib/modules/serviceable.rb"
 
-class WordService
-  include Serviceable
+class WordService  
   def self.word_search
     response = Serviceable.phrases_words_connection.get("/api/v1/words?amount=")
     Serviceable.parse_json(response) 

@@ -1,7 +1,6 @@
 require "./lib/modules/serviceable.rb"
 
-class GiphyService
-  include Serviceable
+class GiphyService  
   def self.gif_search(phrase)
     root = Serviceable.root_with_credentials("https://api.giphy.com", "api_key", "giphy_api_key")
 
