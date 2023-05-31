@@ -1,7 +1,6 @@
 class WordFacade
   def self.find_word
     response = WordService.word_search
-# require 'pry'; binding.pry
     response[:data][0][:attributes][:word]
    
   end
