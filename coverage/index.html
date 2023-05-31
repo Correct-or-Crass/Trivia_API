@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-30T21:14:00-04:00">2023-05-30T21:14:00-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-30T21:23:45-04:00">2023-05-30T21:23:45-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1617,7 +1617,7 @@
 
             
 
-            <code class="ruby">  def self.root_with_credentials(root, param_title, env_key)</code>
+            <code class="ruby">  def self.root_with_credentials(domain_name, param_title, env_key)</code>
           </li>
         </div>
       
@@ -1628,7 +1628,7 @@
 
             
 
-            <code class="ruby">    Faraday.new(root) do |root|</code>
+            <code class="ruby">    Faraday.new(domain_name) do |query|</code>
           </li>
         </div>
       
@@ -1639,7 +1639,7 @@
 
             
 
-            <code class="ruby">      root.params[param_title] = ENV[env_key]</code>
+            <code class="ruby">      query.params[param_title] = ENV[env_key]</code>
           </li>
         </div>
       
