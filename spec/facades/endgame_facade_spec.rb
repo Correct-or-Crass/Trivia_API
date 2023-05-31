@@ -23,8 +23,8 @@ RSpec.describe 'Endgame Facade' do
         type_3 = EndgameFacade.find_phrase_type(percentage_3)
 
         expect(type_1 && type_2).to be_a String
-        expect(type_1).to eq("insult")
-        expect(type_2 && type_3).to eq("compliment")
+        expect(type_1).to eq("insults")
+        expect(type_2 && type_3).to eq("compliments")
       end
 
       it "#score_percentage and #find_phrase_type opperate correctly if total_questions count changes from the default" do
@@ -32,8 +32,33 @@ RSpec.describe 'Endgame Facade' do
         type_4 = EndgameFacade.find_phrase_type(percentage_4)
 
         expect(percentage_4).to be_within(0.01).of(50.0)
-        expect(type_4).to eq("insult")
+        expect(type_4).to eq("insults")
       end
     end
+
+    context 'return results based on score', :vcr do 
+      it 'can return a collection of compliment phrase and gif for winning score' do 
+        wins = 3
+        rounds = 5
+        phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
+        
+        expect(phrase_and_gif).to be_an Array 
+        expect(phrase_and_gif.count).to eq 2 
+        expect(phrase_and_gif.first).to be_a String
+        expect(phrase_and_gif.last).to be_an Array
+      end  
+      
+      it 'can return a collection of insult phrase and gif for losing score' do 
+        wins = 1
+        rounds = 5
+        phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
+        
+        expect(phrase_and_gif).to be_an Array 
+        expect(phrase_and_gif.count).to eq 2 
+        expect(phrase_and_gif.first).to be_a String
+        expect(phrase_and_gif.last).to be_an Array
+        
+      end
+    end 
   end
 end

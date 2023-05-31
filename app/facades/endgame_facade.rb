@@ -1,19 +1,30 @@
 class EndgameFacade 
-  #to do:
-  #create class method that searchs for phrase and gif
-    #method will need to take an argument (rounds_won, total_rounds (optional))
+  def self.get_phrase_and_gif(wins, rounds)
+    percentage = score_percentage(wins, rounds)
+    type = find_phrase_type(percentage)
+    phrase = get_endgame_phrase(type)
+    gif = get_endgame_gif(phrase)
+    [phrase, gif]
+  end
 
-  #helper method will get the phrase
-    # make phrase service call with the #find_phrase_type 
+  def self.get_endgame_phrase(type)
+    endgame_phrase = RandomPhraseService.generate_phrase(type)
+    if endgame_phrase[:data][:type] == "compliment"
+      endgame_phrase[:data][:attributes][:compliment_phrase]
+    elsif endgame_phrase[:data][:type] == "insult"
+      endgame_phrase[:data][:attributes][:insult_phrase]
+    end
+  end
 
-  # helper method will get the gif
-    #pass phrase to giphy facade
+  def self.get_endgame_gif(phrase)
+    GiphyFacade.mean_or_nice(phrase)
+  end
 
   def self.find_phrase_type(percentage)
     if percentage >= 60.0
-      return "compliment"
+      return "compliments"
     else
-      return "insult"
+      return "insults"
     end
   end
 
