@@ -8,7 +8,6 @@ RSpec.describe 'Word Facade' do
 
         expect(response).to be_a String
         expect(response.split.count).to eq 1
-        require 'pry'; binding.pry
       end
       
       it 'repsonses with multiple random words' do
