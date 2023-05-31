@@ -5,6 +5,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+log/test.log
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
@@ -17,10 +18,13 @@
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
+tmp/cache/bootsnap/load-path-cache
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /coverage
 /coverage.data
+coverage/.resultset.json
+coverage/index.html
 # Ignore application configuration
 /config/application.yml
