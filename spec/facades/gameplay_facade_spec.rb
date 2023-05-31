@@ -5,7 +5,7 @@ RSpec.describe 'Gameplay Facade' do
     context 'return results based on score', :vcr do 
       it 'can return a collection of compliment phrase and gif for winning score' do 
         
-        word_count = 4
+        word_count = 4 #value should come from query or use default
         words_pic_package = GameplayFacade.get_words_answer_pics(word_count)
         
       end
