@@ -108,6 +108,7 @@ GEM
       thor (>= 0.14.0, < 2)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    graphql (2.0.22)
     hashdiff (1.0.1)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
@@ -248,6 +249,7 @@ DEPENDENCIES
   faker
   faraday
   figaro
+  graphql
   launchy
   orderly
   pg (~> 1.1)

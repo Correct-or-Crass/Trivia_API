@@ -564,3 +564,50 @@ Processing by Api::V1::WordsController#index as */*
 Completed 204 No Content in 394ms (ActiveRecord: 0.0ms | Allocations: 1041)
 
 
+Started GET "/" for ::1 at 2023-05-31 14:09:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/janiceweaver/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/janiceweaver/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.9ms | Allocations: 631)
+Completed 200 OK in 18ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5193)
+
+
+Started GET "/graphql" for ::1 at 2023-05-31 14:10:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/graphql"):
+  
+Started GET "/favicon.ico" for ::1 at 2023-05-31 14:10:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/graphql_path" for ::1 at 2023-05-31 14:10:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/graphql_path"):
+  
+Started GET "/" for ::1 at 2023-05-31 14:11:09 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/janiceweaver/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/janiceweaver/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.6ms | Allocations: 272)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 759)
+
+
+Started GET "/graphql" for ::1 at 2023-05-31 14:11:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/graphql"):
+  
+Started POST "/graphql" for ::1 at 2023-05-31 14:22:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphqlController#execute as */*
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 5565)
+
+
+Started POST "/graphql" for ::1 at 2023-05-31 14:23:47 -0500
+Processing by GraphqlController#execute as */*
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1851)
+
+
+Started POST "/graphql" for ::1 at 2023-05-31 14:23:57 -0500
+Processing by GraphqlController#execute as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 249)
+
+
