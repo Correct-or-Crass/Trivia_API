@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-06-01T08:11:01-06:00">2023-06-01T08:11:01-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-06-01T08:14:26-06:00">2023-06-01T08:14:26-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>2</b> files in total.
+    <b>1</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>10</b> relevant lines,
-    <span class="green"><b>10</b> lines covered</span> and
+    <b>4</b> relevant lines,
+    <span class="green"><b>4</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -71,22 +71,11 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#c0d46d5d7088304758c5706b159c9536de9ac236" class="src_link" title="app/facades/word_facade.rb">app/facades/word_facade.rb</a></td>
+            <td class="strong t-file__name"><a href="#6b03cf53d33629f882080282ac78dee188316bd4" class="src_link" title="app/facades/photo_facade.rb">app/facades/photo_facade.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">10</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#0484ee642919e4fe9155e3d04c5e0276323389c6" class="src_link" title="app/services/word_service.rb">app/services/word_service.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -109,9 +98,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="c0d46d5d7088304758c5706b159c9536de9ac236">
+        <div class="source_table" id="6b03cf53d33629f882080282ac78dee188316bd4">
   <div class="header">
-    <h3>app/facades/word_facade.rb</h3>
+    <h3>app/facades/photo_facade.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -142,7 +131,7 @@
 
             
 
-            <code class="ruby">class WordFacade</code>
+            <code class="ruby">class PhotoFacade</code>
           </li>
         </div>
       
@@ -153,7 +142,7 @@
 
             
 
-            <code class="ruby">  def self.find_word</code>
+            <code class="ruby">  def self.photo(word)</code>
           </li>
         </div>
       
@@ -164,148 +153,7 @@
 
             
 
-            <code class="ruby">    response = WordService.word_search</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    response[:data][:attributes][:word]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">      # response.map do |r|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">      # Word.new(r)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">      # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="0484ee642919e4fe9155e3d04c5e0276323389c6">
-  <div class="header">
-    <h3>app/services/word_service.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class WordService</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.conn</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby">    # require &#39;pry&#39;; binding.pry</code>
+            <code class="ruby">     photo = Unsplash::Photo.search(&quot;#{word}&quot;)</code>
           </li>
         </div>
       
@@ -316,7 +164,7 @@
 
             
 
-            <code class="ruby">   response =  Faraday.new(&quot;https://shielded-headland-00998.herokuapp.com&quot;)</code>
+            <code class="ruby">     photo.sample.to_json</code>
           </li>
         </div>
       
@@ -333,83 +181,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.word_search</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    response = conn.get(&quot;/api/v1/words&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">    # require &#39;pry&#39;; binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    JSON.parse(response.body, symbolize_names: true) </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
             
             
 
