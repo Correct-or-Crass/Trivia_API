@@ -24,3 +24,10 @@
 /coverage.data
 # Ignore application configuration
 /config/application.yml
+
+# Conflicting files
+coverage/.last_run.json
+coverage/.resultset.json
+coverage/index.html
+log/test.log
+tmp/cache/bootsnap/load-path-cache
