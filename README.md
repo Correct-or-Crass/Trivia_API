@@ -1,3 +1,9 @@
+<!-- PROJECT LOGO -->
+<div align="center">
+  <p align="center">
+    <img src="https://github.com/Correct-or-Crass/logo/blob/main/Screen%20Shot%202023-05-13%20at%2011.50.47%20AM.png" alt="Profile" width="600" >
+  </p>
+</div>  
 <a name="readme-top"></a>
 
 ### This app is in the developmental phase. Please see "Project Status" for more information
@@ -13,26 +19,16 @@
     <li>
       <a href="#stack-and-deployment-instructions">Stack and Deployment instructions</a>
     </li>
+    <li>
+      <a href="#apis">APIs</a>
+    </li>
   </ul>
 </details>
 
-<!-- PROJECT STATUS -->
-<details close>
-  <summary>Project Status</summary>
-    <ul>
-      May 24 update
-      <li> ReadMe: initial draft created </li> 
-      <li> GiphyFacade: method selecting longest words from phrase in progress </li> 
-    </ul>
-<br>
-
-  <strong><u>Roadmap</u></strong>  
-  [ ] Consume and Test Upsplash API  
-  [ ] Structure Controllers to work with GraphQL   
-  [ ] Incorporate GraphQL  
-  [ ] Create Serializers  
-</details>
-<br>
+## Project Status
+June 32 update
+- [x] Consume and Test Unsplash API using Unsplash Gem
+- [x] Endgame: Render endgame facade and tests
 
 ## Overview
 Trivia API exposes endpoints that provide information for a front-end application to build a sassy trivia game!
@@ -75,3 +71,30 @@ Deploy locally:
 
 
 <p align="right"><a href="#readme-top">back to top</a></p>
+
+## Development Team
+
+  <div align="center">
+  <p align="center">
+
+  |       |       |       |       |
+  | :---: | :---: | :---: | :---: |
+  | <img src="https://avatars.githubusercontent.com/u/108754743?v=4" alt="Profile" width="80" height="80"><br> | <img src="https://avatars.githubusercontent.com/u/106788066?v=4" alt="Profile" width="80" height="80"><br> | <img src="https://avatars.githubusercontent.com/u/87088092?v=4" alt="Profile" width="80" height="80"><br> | <img src="https://avatars.githubusercontent.com/u/109649285?s=96&v=4" alt="Profile" width="80" height="80"><br> 
+  |   Lacey Weaver   | Sergio Azcona | Devin Pile | Bryan Flanagan |
+  | [![Github]][GithubLacey-url] | [![Github]][GithubSergio-url] | [![Github]][GithubDevin-url] | [![Github]][GithubBryan-url] |
+  | [![LinkedIn]][LinkedInLacey-url] | [![LinkedIn]][LinkedInSergio-url] | [![LinkedIn]][LinkedInDevin-url] | [![LinkedIn]][LinkedInBryan-url] |
+
+  </p>
+</div>
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+[Github]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
+[GithubLacey-url]: https://github.com/jlweave
+[GithubSergio-url]: https://github.com/Sergio-Azcona
+[GithubDevin-url]: https://github.com/devinpile
+[GithubBryan-url]: https://github.com/bflanagan138
+[LinkedIn]: https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
+[LinkedInLacey-url]: https://www.linkedin.com/in/lacey-weaver-be-dev/
+[LinkedInSergio-url]: https://www.linkedin.com/in/sergio-azcona/
+[LinkedInDevin-url]: https://www.linkedin.com/in/devin-pile/
+[LinkedInBryan-url]: https://www.linkedin.com/in/bryanflanagan138/
