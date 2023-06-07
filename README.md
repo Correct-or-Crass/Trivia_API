@@ -49,6 +49,57 @@ We provide all this lighthearted content! All the front-end has to do is plug an
 
 Deploy locally:
 1. Clone the repo
+   ```<!-- PROJECT LOGO -->
+<div align="center">
+  <p align="center">
+    <img src="https://github.com/Correct-or-Crass/logo/blob/main/Screen%20Shot%202023-05-13%20at%2011.50.47%20AM.png" alt="Profile" width="600" >
+  </p>
+</div>  
+<a name="readme-top"></a>
+
+### This app is in the developmental phase. Please see "Project Status" for more information
+
+<br>
+<a name="table-of-contents"></a>
+<details>
+  <summary>Table of Contents</summary>
+  <ul list-style-position="inside">
+      <li><a href="#project-status">Project Status</a></li>
+      <li><a href="#overview">Overview</a></li>
+    </li>
+    <li>
+      <a href="#stack-and-deployment-instructions">Stack and Deployment instructions</a>
+    </li>
+    <li>
+      <a href="#apis">APIs</a>
+    </li>
+  </ul>
+</details>
+
+## Project Status
+June 32 update
+- [x] Consume and Test Unsplash API using Unsplash Gem
+- [x] Endgame: Render endgame facade and tests
+
+## Overview
+Trivia API exposes endpoints that provide information for a front-end application to build a sassy trivia game!
+The end user will have to match a word (from a list) to a photo for five rounds. 
+
+So easy, right!?! 
+
+"BUT"... the user better score well because at the end of the fifth round we evaluate the user's performance and provide a triumphant message celebrating a winning record or a disparaging phrase that playfully "kicks 'em while they're down", along with a gif to emphatically drive home our thoughts!
+
+We provide all this lighthearted content! All the front-end has to do is plug and let their users play. 
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+
+## Stack and Deployment instructions
+- Ruby 3.2.2
+- Rails 7.0.4
+
+Deploy locally:
+1. Clone the repo
    ```
    git clone git@github.com:Correct-or-Crass/Trivia_API.git
    ```
