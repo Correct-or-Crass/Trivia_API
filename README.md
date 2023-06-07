@@ -21,20 +21,26 @@
       <a href="#stack-and-deployment-instructions">Stack and Deployment instructions</a>
     </li>
     <li>
+      <a href="#external_apis">External APIs</a>
+    </li>
+    <li>
       <a href="#apis">APIs</a>
     </li>
   </ul>
 </details>
 
 ## Project Status
+___
 June 3, 2023 update
 - [x] Consume and Test Unsplash API using Unsplash Gem
 - [x] Endgame: Render endgame facade and tests
 
 ## Mission Statement
+___
 Our mission is to create a complete and tested back end application that can be consumed by front end developers to create an functional Trivia Game.
 
 ## Overview
+___
 Trivia API exposes endpoints that provide information for a front-end application to build a sassy trivia game!
 The end user will have to match a word (from a list) to a photo for five rounds. 
 
@@ -47,6 +53,7 @@ We provide all this lighthearted content! All the front-end has to do is plug an
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Stack and Deployment instructions
+___
 - Ruby 3.2.2
 - Rails 7.0.4
 
@@ -70,17 +77,108 @@ Deploy locally:
     ```
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-## APIs 
+## External APIs 
+___
+This application relies on the following APIs:
 
+* [Random Words / Compliment / Insult Generator][Random_Generator-url]
 
+* [Unsplash][Unsplash-url]
 
+* [Giphy][Giphy-url]
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-## Development Team
+## APIs
+___
+This application creates the following API endpoints:
+🗂️ Root Directory: {deployment address tbd}
+
+<br>
+
+🔠
+**Words**
+
+*'GET /api/v1/???'*
+
+Successful response:
+
+```
+{
+  "data": {
+      }
+}
+``` 
+<br>
+
+🥰
+**Compliment**
+
+*'GET /api/v1/???'*
+
+Successful response:
+
+```
+{
+  "data": {
+      }
+}
+```  
+<br>
+
+🤬
+**Insult**
+
+*'GET /api/v1/???'*
+
+Successful response:
+
+ ```
+{
+  "data": {
+      }
+}
+```  
+<br>
+
+📸
+**Picture**
+
+  *'GET /api/v1/???'*
+
+  Successful response:
+
+ ```
+{
+  "data": {
+      }
+}
+``` 
+<br>
+
+🏁
+**Endgame Giphy**
+
+  *'GET /api/v1/???'*
+
+  Successful response:
+
+ ```
+{
+  "data": {
+      }
+}
+``` 
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+
+
 
   <div align="center">
   <p align="center">
+
+<h2>Meet our Development Team !</h2>
 
   |       |       |       |       |
   | :---: | :---: | :---: | :---: |
@@ -88,6 +186,7 @@ Deploy locally:
   |   Lacey Weaver   | Sergio Azcona | Devin Pile | Bryan Flanagan |
   | [![Github]][GithubLacey-url] | [![Github]][GithubSergio-url] | [![Github]][GithubDevin-url] | [![Github]][GithubBryan-url] |
   | [![LinkedIn]][LinkedInLacey-url] | [![LinkedIn]][LinkedInSergio-url] | [![LinkedIn]][LinkedInDevin-url] | [![LinkedIn]][LinkedInBryan-url] |
+  ___
 
   </p>
 </div>
@@ -104,3 +203,5 @@ Deploy locally:
 [LinkedInDevin-url]: https://www.linkedin.com/in/devin-pile/
 [LinkedInBryan-url]: https://www.linkedin.com/in/bryanflanagan138/
 [Random_Generator-url]: https://github.com/Correct-or-Crass/random_word_insult_compliment_generator
+[Unsplash-url]: https://unsplash.com/developers
+[Giphy-url]:https://developers.giphy.com/
