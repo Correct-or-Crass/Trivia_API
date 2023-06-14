@@ -1,5 +1,3 @@
-# require './././app/serializer/game_play_serializer'
-
 class Api::V1::GamePlayApisController < ApplicationController
   def index 
     @answers = WordFacade.multi_word_search(num_param)
