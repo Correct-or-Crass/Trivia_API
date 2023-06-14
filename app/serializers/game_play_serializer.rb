@@ -1,13 +1,14 @@
 class GamePlaySerializer
-  # include JSONAPI::Serializer
-  # attributes  :photo,
-  #             :answer,
-  #             :choices
- "data" {
-        "attributes" {
-          "photo": @photo,
-          "answer": @answers[0],
-          "choices": @answers
-        }
- }
+
+  def self.play_response(photo,answer,words)
+    {
+     "data": {
+            "attributes": {
+              "photo": photo,
+              "answer": answer,
+              "choices": words
+            }
+     }
+    }
+  end
 end
