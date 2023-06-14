@@ -4,8 +4,7 @@ class Api::V1::GamePlayApisController < ApplicationController
   def index 
     @answers = WordFacade.multi_word_search(num_param)
     @photo = PhotoFacade.photos(@answers[0])
-    require 'pry'; binding.pry
-    render json: GamePlaySerializer.new(@photo, @answers[0], @answers), status:200
+    render json: GamePlaySerializer.play_response(@photo, @answers[0], @answers), status:200
   end
 
   private

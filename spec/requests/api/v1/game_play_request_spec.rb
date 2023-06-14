@@ -10,8 +10,23 @@ RSpec.describe "Game Play" do
       expect(response).to be_successful
       expect(response.status).to be 200
 
-      require 'pry'; binding.pry
-      parse = Serviceable.parse_json(response)
+      parse = Serviceable.parse_json(response)[:data][:attributes]
+      expect(parse).to be_a Hash
+      expect(parse).to have_key (:photo)
+      expect(parse[:photo]).to be_a Hash
+      expect(parse[:photo]).to have_key (:image_url)
+      expect(parse[:photo][:image_url]).to be_a String
+      expect(parse[:photo][:image_url]).to include ("https://images.unsplash.com/")
+      expect(parse[:photo]).to have_key (:creator_name)
+      expect(parse[:photo][:creator_name]).to be_a String
+      expect(parse[:photo]).to have_key (:creator_link)
+      expect(parse[:photo][:creator_link]).to be_a String
+      expect(parse[:photo][:creator_link]).to include ("https://api.unsplash.com/photos/")
+      expect(parse).to have_key (:answer)
+      expect(parse[:answer]).to be_a String
+      expect(parse).to have_key (:choices)
+      expect(parse[:choices]).to be_a Array
+      expect(parse[:choices][1]).to include (parse[:choices][0])
     end
   end
 end
