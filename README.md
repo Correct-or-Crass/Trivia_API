@@ -31,9 +31,11 @@
 
 ## Project Status
 ___
-June 3, 2023 update
-- [x] Consume and Test Unsplash API using Unsplash Gem
-- [x] Endgame: Render endgame facade and tests
+June 14, 2023 update
+- [x] Serviceable incorporated into services
+- [ ] Gameplay Controller
+- [ ] Endgame Controller
+- [ ] ErrorHandling Serializer
 
 ## Mission Statement
 ___
