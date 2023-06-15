@@ -3,14 +3,14 @@ require './././lib/modules/serviceable'
 
 RSpec.describe "Game Play" do
   context 'game play', :vcr do
-    it 'returns a photo, correct answer and group of choices' do
+    it 'returns a photo, correct answer and a default of 4 choices' do
       num = nil
       get "/api/v1/game_play_apis?num=#{num}"
 
       expect(response).to be_successful
       expect(response.status).to be 200
-
       parse = Serviceable.parse_json(response)[:data][:attributes]
+      
       expect(parse).to be_a Hash
       expect(parse).to have_key (:photo)
       expect(parse[:photo]).to be_a Hash
@@ -27,6 +27,18 @@ RSpec.describe "Game Play" do
       expect(parse).to have_key (:choices)
       expect(parse[:choices]).to be_a Array
       expect(parse[:choices][1]).to include (parse[:choices][0])
+      expect(parse[:choices][1].length).to eq (4)
+    end
+
+    it 'returns a photo, correct answer and specified amount of choices' do
+      num = 6
+      get "/api/v1/game_play_apis?num=#{num}"
+      require 'pry'; binding.pry
+      expect(response).to be_successful
+      expect(response.status).to be 200
+
+      parse = Serviceable.parse_json(response)[:data][:attributes]
+      expect(parse[:choices][1].length).to eq (6)
     end
   end
 end
