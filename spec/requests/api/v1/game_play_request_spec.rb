@@ -33,7 +33,7 @@ RSpec.describe "Game Play" do
     it 'returns a photo, correct answer and specified amount of choices' do
       num = 6
       get "/api/v1/game_play_apis?num=#{num}"
-      require 'pry'; binding.pry
+      
       expect(response).to be_successful
       expect(response.status).to be 200
 
