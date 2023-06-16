@@ -9,7 +9,7 @@ class WordService
     Serviceable.parse_json(response)
   end
 
-  def self.multi_word(num=4)
+  def self.multi_word(num)
     response = conn.get("/api/v1/words?amount=#{num}")
     Serviceable.parse_json(response)
   end

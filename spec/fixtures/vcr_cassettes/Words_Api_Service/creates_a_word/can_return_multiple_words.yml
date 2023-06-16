@@ -35,28 +35,28 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b7f09f4f2cbd9132b3d211f32106c365"
+      - W/"cd7e2d10d9feb0c2d0b8dd2c8bcdd07d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 43115d77-fbf5-43ea-b3a3-1af8cfb2505b
+      - f4f0be94-43eb-4ac1-9908-16b4c98f8cc0
       X-Runtime:
-      - '0.003841'
+      - '0.003890'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 26 May 2023 22:20:04 GMT
+      - Fri, 16 Jun 2023 16:14:32 GMT
       Content-Length:
-      - '69'
+      - '67'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"116","type":"word","attributes":{"word":"Dungeon"}}]}'
-  recorded_at: Fri, 26 May 2023 22:20:04 GMT
+      string: '{"data":[{"id":"67","type":"word","attributes":{"word":"Street"}}]}'
+  recorded_at: Fri, 16 Jun 2023 16:14:32 GMT
 - request:
     method: get
-    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=4
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=5
     body:
       encoding: US-ASCII
       string: ''
@@ -89,23 +89,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1eee37cdbf43f6691eace458275681bb"
+      - W/"517c448750822ddca4833f62b5886ebb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2edeae87-9eea-4b1d-8d68-f3e98182c106
+      - db347eb7-a0eb-416f-a9bc-2bd0e260a412
       X-Runtime:
-      - '0.003847'
+      - '0.004306'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 26 May 2023 22:20:04 GMT
+      - Fri, 16 Jun 2023 16:14:32 GMT
       Content-Length:
-      - '239'
+      - '300'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"26","type":"word","attributes":{"word":"Tragedy"}},{"id":"13","type":"word","attributes":{"word":"Plate"}},{"id":"120","type":"word","attributes":{"word":"Print"}},{"id":"111","type":"word","attributes":{"word":"Garden"}}]}'
-  recorded_at: Fri, 26 May 2023 22:20:04 GMT
+      string: '{"data":[{"id":"30","type":"word","attributes":{"word":"Endomitriosis"}},{"id":"52","type":"word","attributes":{"word":"Query"}},{"id":"16","type":"word","attributes":{"word":"Magazine"}},{"id":"39","type":"word","attributes":{"word":"Foot"}},{"id":"101","type":"word","attributes":{"word":"Poop"}}]}'
+  recorded_at: Fri, 16 Jun 2023 16:14:32 GMT
 recorded_with: VCR 6.1.0
