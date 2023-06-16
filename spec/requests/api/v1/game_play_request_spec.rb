@@ -2,10 +2,9 @@ require 'rails_helper'
 require './././lib/modules/serviceable'
 
 RSpec.describe "Game Play" do
-  context 'game play', :vcr do
+  context 'happy path testing', :vcr do
     it 'returns a photo, correct answer and a default of 4 choices' do
-      num = nil
-      get "/api/v1/game_play_apis?num=#{num}"
+      get "/api/v1/game_play_apis"
 
       expect(response).to be_successful
       expect(response.status).to be 200
