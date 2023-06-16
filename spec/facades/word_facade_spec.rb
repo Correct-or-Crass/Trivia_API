@@ -10,7 +10,7 @@ RSpec.describe 'Word Facade' do
         expect(response.split.count).to eq (1)
       end
       
-      it 'responds with answer and 4 choices' do
+      it 'responds with an answer and 4 choices that includes the answer' do
         response = WordFacade.multi_word_search(4)
         
         expect(response).to be_an Array
