@@ -9,7 +9,6 @@ class ErrorSerializer
           status: status_code.to_s, 
           source: {
                    "pointer": source_info,
-                   "parameter": source_info.split("/").last
                     }
           } 
         ]
