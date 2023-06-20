@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"83f78467bc41baa1bf54b0aaa5a02441"
+      - W/"b953d68c0dda43146ba19af0c8c90703"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b113aa83-c6ac-4dc4-b7dc-80304fbcb518
+      - d7722de5-3c6d-4856-92bc-93b521021a4d
       X-Runtime:
-      - '0.003623'
+      - '0.005143'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Tue, 30 May 2023 17:17:12 GMT
+      - Fri, 16 Jun 2023 16:14:51 GMT
       Content-Length:
-      - '237'
+      - '238'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"84","type":"word","attributes":{"word":"Pizza"}},{"id":"15","type":"word","attributes":{"word":"Fist"}},{"id":"9","type":"word","attributes":{"word":"Hand"}},{"id":"89","type":"word","attributes":{"word":"Abstraction"}}]}'
-  recorded_at: Tue, 30 May 2023 17:17:12 GMT
+      string: '{"data":[{"id":"62","type":"word","attributes":{"word":"Poster"}},{"id":"100","type":"word","attributes":{"word":"Solar"}},{"id":"80","type":"word","attributes":{"word":"Abrasion"}},{"id":"139","type":"word","attributes":{"word":"Log"}}]}'
+  recorded_at: Fri, 16 Jun 2023 16:14:51 GMT
 recorded_with: VCR 6.1.0

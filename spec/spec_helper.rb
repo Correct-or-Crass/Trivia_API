@@ -102,4 +102,9 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data( '<GIPHY_api_key>' ) { ENV['giphy_api_key'] } 
   config.configure_rspec_metadata!
+  config.default_cassette_options = {
+    :match_requests_on => [:method, :body]
+  }
 end
+
+

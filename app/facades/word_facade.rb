@@ -12,5 +12,7 @@ class WordFacade
       words << response[:attributes][:word]
     end
     words
+    word = words.sample
+    choices = [word, words]
   end
 end

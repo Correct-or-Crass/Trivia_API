@@ -4,7 +4,7 @@ RSpec.describe 'Words Api Service' do
   context "creates a word", :vcr do
     before do
      @word = WordService.word_search
-     @words = WordService.multi_word
+     @words = WordService.multi_word(5)
     end
     
     it "creates a new word from api" do
@@ -29,7 +29,7 @@ RSpec.describe 'Words Api Service' do
     it "can return multiple words" do
       expect(@words).to be_a Hash
       expect(@words[:data]).to be_a Array
-      expect(@words[:data].count).to eq 4 #set as default param
+      expect(@words[:data].count).to eq 5 #set as default param
       expect(@words[:data][0].keys).to eq [:id, :type, :attributes]
       expect(@words[:data][0][:attributes][:word]).to be_a String
     end

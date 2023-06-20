@@ -35,28 +35,28 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f558ecce25dace7b3b3ac8da78671bf1"
+      - W/"87f06c08f68ac775568db258a99c9809"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7bd3c7ea-fe7b-46a9-a976-59d6a2d41ab0
+      - 7c2812d6-35f4-415f-b9ae-cc73f3c3b11e
       X-Runtime:
-      - '0.008849'
+      - '0.036334'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 26 May 2023 22:20:04 GMT
+      - Fri, 16 Jun 2023 16:14:31 GMT
       Content-Length:
-      - '69'
+      - '67'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"20","type":"word","attributes":{"word":"Abrasion"}}]}'
-  recorded_at: Fri, 26 May 2023 22:20:04 GMT
+      string: '{"data":[{"id":"114","type":"word","attributes":{"word":"Flask"}}]}'
+  recorded_at: Fri, 16 Jun 2023 16:14:31 GMT
 - request:
     method: get
-    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=4
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=5
     body:
       encoding: US-ASCII
       string: ''
@@ -89,23 +89,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"18f6a7536b150fd34817b90d8c30daf6"
+      - W/"875a11d78fd77be3c43437874c10adfa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a0598b7-bf16-4129-b2ab-3607c66a5e64
+      - 6fcf7856-b463-4426-a5cf-e62dbb4b5342
       X-Runtime:
-      - '0.005395'
+      - '0.003848'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 26 May 2023 22:20:04 GMT
+      - Fri, 16 Jun 2023 16:14:31 GMT
       Content-Length:
-      - '237'
+      - '294'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"130","type":"word","attributes":{"word":"Blemish"}},{"id":"61","type":"word","attributes":{"word":"Card"}},{"id":"73","type":"word","attributes":{"word":"Plate"}},{"id":"59","type":"word","attributes":{"word":"Errand"}}]}'
-  recorded_at: Fri, 26 May 2023 22:20:04 GMT
+      string: '{"data":[{"id":"8","type":"word","attributes":{"word":"Shoe"}},{"id":"97","type":"word","attributes":{"word":"Salmonella"}},{"id":"125","type":"word","attributes":{"word":"Crab"}},{"id":"9","type":"word","attributes":{"word":"Hand"}},{"id":"49","type":"word","attributes":{"word":"Trillion"}}]}'
+  recorded_at: Fri, 16 Jun 2023 16:14:31 GMT
 recorded_with: VCR 6.1.0
