@@ -32,7 +32,7 @@ RSpec.describe "Error Requests" do
         get "/api/v11/gameplay"
         
         parsed_response = Serviceable.parse_json(response)
-        # require 'pry';binding.pry
+
         expect(parsed_response[:errors][0][:title]).to eq("Bad Request")
         expect(parsed_response[:errors][0][:detail]).to eq("route not found")
         expect(parsed_response[:errors][0][:status]).to eq("400")

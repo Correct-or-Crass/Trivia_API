@@ -8,8 +8,8 @@ class ErrorSerializer
           detail: detail_message,
           status: status_code.to_s, 
           source: {
-                   "pointer": source_info,
-                    }
+                   pointer: source_info,
+                  }
           } 
         ]
     }
