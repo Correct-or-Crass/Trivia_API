@@ -3,7 +3,7 @@ require "./lib/modules/serviceable"
 
 RSpec.describe "Error Requests" do
   describe "#route_not_found captures any invalid url" do
-    context "expect reponse to have error objects with three level" do
+    context "expect reponse to have error objects with three levels" do
       it "inspects the different keys & values datatypes" do
         get "/api/v1/game_play_apissssss"
         expect(response.status).to eq(400)
