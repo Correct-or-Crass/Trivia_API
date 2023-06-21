@@ -10,14 +10,15 @@ RSpec.describe 'Word Facade' do
         expect(response.split.count).to eq (1)
       end
       
-      it 'responds with an answer and 4 choices that includes the answer' do
+      it 'responds as a hash with an answer and an array of choices which includes the answer' do
         response = WordFacade.multi_word_search(4)
         
-        expect(response).to be_an Array
+        expect(response).to be_an Hash
         expect(response.count).to eq (2)
-        expect(response[1]).to be_a Array
-        expect(response[1].count).to eq (4)
-        expect(response[1]).to include (response[0])
+        expect(response["answer"]).to be_a String
+        expect(response["choices"]).to be_a Array
+        expect(response["choices"].count).to eq (4)
+        expect(response["choices"]).to include (response["answer"])
       end
     end
   end
