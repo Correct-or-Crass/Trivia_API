@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d4c66ac237b8f6a5c3bb8790a004c720"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a86860ea-9297-4e1b-9c55-0b67b0b617e4
+      X-Runtime:
+      - '0.004128'
+      Server:
+      - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
+      Date:
+      - Wed, 21 Jun 2023 04:50:12 GMT
+      Content-Length:
+      - '358'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"102","type":"word","attributes":{"word":"Thermometer"}},{"id":"127","type":"word","attributes":{"word":"Door"}},{"id":"73","type":"word","attributes":{"word":"Plate"}},{"id":"56","type":"word","attributes":{"word":"Dungeon"}},{"id":"113","type":"word","attributes":{"word":"Eagle"}},{"id":"91","type":"word","attributes":{"word":"Service"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:50:12 GMT
+recorded_with: VCR 6.1.0
