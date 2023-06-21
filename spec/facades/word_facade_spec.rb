@@ -13,12 +13,18 @@ RSpec.describe 'Word Facade' do
       it 'responds as a hash with an answer and an array of choices which includes the answer' do
         response = WordFacade.multi_word_search(4)
         
-        expect(response).to be_an Hash
+        expect(response).to be_a Hash
         expect(response.count).to eq (2)
         expect(response["answer"]).to be_a String
         expect(response["choices"]).to be_a Array
         expect(response["choices"].count).to eq (4)
         expect(response["choices"]).to include (response["answer"])
+      end
+
+      it 'responds with 6 choices when 6 is passed in as param' do
+        response = WordFacade.multi_word_search(6)
+        
+        expect(response["choices"].count).to eq (6)
       end
     end
   end
