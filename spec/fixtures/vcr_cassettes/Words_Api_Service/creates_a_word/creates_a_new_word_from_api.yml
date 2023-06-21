@@ -35,25 +35,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"87f06c08f68ac775568db258a99c9809"
+      - W/"6ef2d9d80ddaa54a205f59335bd7023c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7c2812d6-35f4-415f-b9ae-cc73f3c3b11e
+      - 28a09c3d-219f-47b4-8b28-b403e8c3f1a7
       X-Runtime:
-      - '0.036334'
+      - '0.005696'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 16 Jun 2023 16:14:31 GMT
+      - Wed, 21 Jun 2023 04:30:59 GMT
       Content-Length:
-      - '67'
+      - '66'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"114","type":"word","attributes":{"word":"Flask"}}]}'
-  recorded_at: Fri, 16 Jun 2023 16:14:31 GMT
+      string: '{"data":[{"id":"53","type":"word","attributes":{"word":"Eagle"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:30:59 GMT
 - request:
     method: get
     uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=5
@@ -89,23 +89,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"875a11d78fd77be3c43437874c10adfa"
+      - W/"91c245cc133a0441a3a33dde33f94608"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6fcf7856-b463-4426-a5cf-e62dbb4b5342
+      - f4e789f9-46b4-4bc0-a304-1a8af6fc16f0
       X-Runtime:
-      - '0.003848'
+      - '0.004009'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 16 Jun 2023 16:14:31 GMT
+      - Wed, 21 Jun 2023 04:31:00 GMT
       Content-Length:
-      - '294'
+      - '299'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"8","type":"word","attributes":{"word":"Shoe"}},{"id":"97","type":"word","attributes":{"word":"Salmonella"}},{"id":"125","type":"word","attributes":{"word":"Crab"}},{"id":"9","type":"word","attributes":{"word":"Hand"}},{"id":"49","type":"word","attributes":{"word":"Trillion"}}]}'
-  recorded_at: Fri, 16 Jun 2023 16:14:31 GMT
+      string: '{"data":[{"id":"19","type":"word","attributes":{"word":"Smile"}},{"id":"117","type":"word","attributes":{"word":"Requiem"}},{"id":"27","type":"word","attributes":{"word":"Wardance"}},{"id":"36","type":"word","attributes":{"word":"Backpack"}},{"id":"73","type":"word","attributes":{"word":"Plate"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:31:00 GMT
 recorded_with: VCR 6.1.0

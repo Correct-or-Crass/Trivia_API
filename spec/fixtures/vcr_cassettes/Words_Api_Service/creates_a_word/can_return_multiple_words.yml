@@ -35,25 +35,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cd7e2d10d9feb0c2d0b8dd2c8bcdd07d"
+      - W/"30dfd83b82a19bd8f30998ae31bd18a5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f4f0be94-43eb-4ac1-9908-16b4c98f8cc0
+      - 4908ac44-4531-47f2-9fc4-0abbf105bca7
       X-Runtime:
-      - '0.003890'
+      - '0.004177'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 16 Jun 2023 16:14:32 GMT
+      - Wed, 21 Jun 2023 04:31:00 GMT
       Content-Length:
-      - '67'
+      - '66'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"67","type":"word","attributes":{"word":"Street"}}]}'
-  recorded_at: Fri, 16 Jun 2023 16:14:32 GMT
+      string: '{"data":[{"id":"32","type":"word","attributes":{"word":"Catch"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:31:00 GMT
 - request:
     method: get
     uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=5
@@ -89,23 +89,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"517c448750822ddca4833f62b5886ebb"
+      - W/"a4fd2ef8e955f098b6ab21e4c81d43a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - db347eb7-a0eb-416f-a9bc-2bd0e260a412
+      - fb7118c0-3aa8-4fc4-ae91-a0a3bfa16847
       X-Runtime:
-      - '0.004306'
+      - '0.003896'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 16 Jun 2023 16:14:32 GMT
+      - Wed, 21 Jun 2023 04:31:00 GMT
       Content-Length:
-      - '300'
+      - '296'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"30","type":"word","attributes":{"word":"Endomitriosis"}},{"id":"52","type":"word","attributes":{"word":"Query"}},{"id":"16","type":"word","attributes":{"word":"Magazine"}},{"id":"39","type":"word","attributes":{"word":"Foot"}},{"id":"101","type":"word","attributes":{"word":"Poop"}}]}'
-  recorded_at: Fri, 16 Jun 2023 16:14:32 GMT
+      string: '{"data":[{"id":"6","type":"word","attributes":{"word":"Guitar"}},{"id":"66","type":"word","attributes":{"word":"Guitar"}},{"id":"135","type":"word","attributes":{"word":"Time"}},{"id":"112","type":"word","attributes":{"word":"Query"}},{"id":"10","type":"word","attributes":{"word":"Lightpost"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:31:00 GMT
 recorded_with: VCR 6.1.0

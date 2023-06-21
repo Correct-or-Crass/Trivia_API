@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b953d68c0dda43146ba19af0c8c90703"
+      - W/"ab144aedc2b56387fca3cc1a15325fcb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d7722de5-3c6d-4856-92bc-93b521021a4d
+      - 93c1b05c-e8dc-4bd4-81bb-26891d6a615b
       X-Runtime:
-      - '0.005143'
+      - '0.012072'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 16 Jun 2023 16:14:51 GMT
+      - Wed, 21 Jun 2023 04:40:24 GMT
       Content-Length:
-      - '238'
+      - '230'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"62","type":"word","attributes":{"word":"Poster"}},{"id":"100","type":"word","attributes":{"word":"Solar"}},{"id":"80","type":"word","attributes":{"word":"Abrasion"}},{"id":"139","type":"word","attributes":{"word":"Log"}}]}'
-  recorded_at: Fri, 16 Jun 2023 16:14:51 GMT
+      string: '{"data":[{"id":"50","type":"word","attributes":{"word":"Fancy"}},{"id":"44","type":"word","attributes":{"word":"Dog"}},{"id":"4","type":"word","attributes":{"word":"Steak"}},{"id":"93","type":"word","attributes":{"word":"Dead"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:40:23 GMT
 recorded_with: VCR 6.1.0
