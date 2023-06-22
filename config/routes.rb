@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      resources :endgame_apis, only: :index
-      resources :game_play_apis, only: :index
+      resources :game_plays, only: :index
+      resources :endgame, only: :index
     end
   end
 end
