@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe 'Endgame Facade' do
   describe 'Happy Path' do
     context "the game score determines the phrase type (insult or compliment)" do
-      let(:percentage_1) { EndgameFacade.score_percentage(2) }
-      let(:percentage_2) { EndgameFacade.score_percentage(3) }
-      let(:percentage_3) { EndgameFacade.score_percentage(4) }
+      let(:percentage_1) { EndgameFacade.score_percentage(2,5) }
+      let(:percentage_2) { EndgameFacade.score_percentage(3,5) }
+      let(:percentage_3) { EndgameFacade.score_percentage(4,5) }
 
-      it "#score_percentage returns the correct_answers percentage based on the default value of total_questions (5 Qs)" do
+      it "#score_percentage returns the correct_answers percentage based on score argument recieved" do
         expect(percentage_1 && percentage_2 && percentage_3).to be_a Float
         expect(percentage_1).to be <= 60
         expect(percentage_2 && percentage_3).to be >= 60

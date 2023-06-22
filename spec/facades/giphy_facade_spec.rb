@@ -21,21 +21,21 @@ RSpec.describe 'Giphy Facade' do
       it "returns a sample from of an 'R' rated gif if service response has one" do
         nsfw_response = GiphyFacade.mean_or_nice("nsfw")
         
-        expect(nsfw_response[0][:rating]).to_not eq(("g").to_json)
-        expect(nsfw_response[0][:rating]).to_not eq(("pg-13").to_json)
-        expect(nsfw_response[0][:rating]).to_not eq(("pg").to_json)
+        expect(nsfw_response[0][:rating]).to_not eq("g")
+        expect(nsfw_response[0][:rating]).to_not eq("pg-13")
+        expect(nsfw_response[0][:rating]).to_not eq("pg")
 
-        expect(nsfw_response[0][:rating]).to eq(("r").to_json)
+        expect(nsfw_response[0][:rating]).to eq("r")
       end
 
       it "returns a sample from of an 'PG' rated gif if service response has one but no R or PG-13 gifs" do
         barney_response = GiphyFacade.mean_or_nice("Mother's Day")
 
-        expect(barney_response[0][:rating]).to_not eq(("g").to_json)
-        expect(barney_response[0][:rating]).to_not eq(("pg-13").to_json)
-        expect(barney_response[0][:rating]).to_not eq(("r").to_json)
+        expect(barney_response[0][:rating]).to_not eq("g")
+        expect(barney_response[0][:rating]).to_not eq("pg-13")
+        expect(barney_response[0][:rating]).to_not eq("r")
         
-        expect(barney_response[0][:rating]).to eq(("pg").to_json)
+        expect(barney_response[0][:rating]).to eq("pg")
       end
     end
 

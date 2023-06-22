@@ -25,9 +25,9 @@ class GiphyFacade
   def self.hash_of_url_title_rating(data)
     gif_data = []
       gif_data << {
-      url:    data[:url].to_json,
-      title:  data[:title].to_json,
-      rating: data[:rating].to_json
+      url:    data[:url],
+      title:  data[:title],
+      rating: data[:rating]
       }
   end
 
