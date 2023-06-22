@@ -33,7 +33,7 @@
 ___
 June 14, 2023 update
 - [x] Serviceable incorporated into services
-- [ ] Gameplay Controller
+- [x] Gameplay Controller
 - [ ] Endgame Controller
 - [ ] ErrorHandling Serializer
 
@@ -100,19 +100,64 @@ This application creates the following API endpoints:
 
 🔠
 **Words**
+___
+- Returns 4 word choices when no param is specified as default
+- Returns photo url and account info for photo owner to provide photo credits 
+- Returns a correct answer word associated with the photo, 4 word choices (includes answer word)
 
-*'GET /api/v1/???'*
+*'GET /api/v1/game_play_apis'*
 
 Successful response:
 
 ```
 {
   "data": {
-      }
+        "attributes": {
+        "photo": {
+              "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
+              "creator_name": "mmcgregor",
+              "creator_link": "https://api.unsplash.com/photos/Ns8trMR4Om8?utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit"
+              },
+        "answer": "Catch",
+        "choices": [
+                "Staircase",
+                "Wood",
+                "Fist",
+                "Catch"
+              ]
+        }
+  }
 }
-``` 
+```
 <br>
 
+___
+- A number param can be provided to return more or less than the default 4 word choices
+
+*'GET /api/v1/game_play_apis?num=5'*
+
+Successful response:
+
+```
+{
+  "data": {
+        "attributes": {
+        "photo": {
+              "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
+              "creator_name": "mmcgregor",
+              "creator_link": "https://api.unsplash.com/photos/Ns8trMR4Om8?utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit"
+              },
+        "answer": "Catch",
+        "choices": [
+                "Staircase",
+                "Wood",
+                "Fist",
+                "Catch"
+              ]
+        }
+  }
+}
+``` 
 🥰
 **Compliment**
 
