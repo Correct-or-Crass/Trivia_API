@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=6
     body:
       encoding: US-ASCII
       string: ''
@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8e405250d12128986dffa5967acc5835"
+      - W/"cb7876cf419a5d26b75f9dd25ca4ab83"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d88ae56f-e273-4284-bf97-fc487aefb755
+      - 609632f8-b939-4cce-a915-20d4175d5ef9
       X-Runtime:
-      - '0.004799'
+      - '0.026327'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Wed, 21 Jun 2023 04:40:23 GMT
+      - Wed, 21 Jun 2023 04:49:21 GMT
       Content-Length:
-      - '68'
+      - '344'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"18","type":"word","attributes":{"word":"Dolphin"}}]}'
-  recorded_at: Wed, 21 Jun 2023 04:40:23 GMT
+      string: '{"data":[{"id":"104","type":"word","attributes":{"word":"Dog"}},{"id":"39","type":"word","attributes":{"word":"Foot"}},{"id":"55","type":"word","attributes":{"word":"Wood"}},{"id":"112","type":"word","attributes":{"word":"Query"}},{"id":"88","type":"word","attributes":{"word":"Jazz"}},{"id":"121","type":"word","attributes":{"word":"Eerie"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:49:21 GMT
 recorded_with: VCR 6.1.0

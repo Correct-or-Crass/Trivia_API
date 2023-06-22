@@ -13,6 +13,6 @@ class WordFacade
     end
     words
     word = words.sample
-    choices = [word, words]
+    word_output = {"answer" => word, "choices" => words}
   end
 end
