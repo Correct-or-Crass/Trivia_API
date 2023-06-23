@@ -101,9 +101,8 @@ This application creates the following API endpoints:
 🔠
 **Words**
 ___
-- Returns 4 word choices when no param is specified as default
-- Returns photo url and account info for photo owner to provide photo credits 
-- Returns a correct answer word associated with the photo, 4 word choices (includes answer word)
+- Returns a correct answer, 4 words (1 of which is the correct answer) and a photo related to the correct answer
+- Photo contains the image's url, the image owner's name and account link to enable front end to credit image owner if desired
 
 *'GET /api/v1/game_play_apis'*
 
