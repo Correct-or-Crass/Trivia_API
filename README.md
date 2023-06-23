@@ -159,7 +159,7 @@ Successful response:
 <br>
 
 🏁
-**Endgame Giphy**
+**Endgame**
 
 A request should include the number of wins and rounds 
 - The default number of wins = 0 and rounds = 5. 
