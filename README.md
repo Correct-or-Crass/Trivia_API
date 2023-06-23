@@ -152,7 +152,8 @@ Successful response:
                 "Staircase",
                 "Wood",
                 "Fist",
-                "Catch"
+                "Catch",
+                "Motorbike"
               ]
         }
   }
