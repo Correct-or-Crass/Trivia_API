@@ -1,5 +1,4 @@
 class GamePlaySerializer
-
   def self.play_response(photo,answer)
     {
      "data": {

@@ -23,8 +23,7 @@ class GiphyFacade
   end
 
   def self.hash_of_url_title_rating(data)
-    gif_data = []
-      gif_data << {
+      {
       url:    data[:url],
       title:  data[:title],
       rating: data[:rating]

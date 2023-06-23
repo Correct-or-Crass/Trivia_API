@@ -4,7 +4,8 @@ class EndgameFacade
     type = find_phrase_type(percentage)
     phrase = get_endgame_phrase(type)
     gif = get_endgame_gif(phrase)
-    [phrase, gif]
+    
+    {phrase: phrase, gif: gif}
   end
 
   def self.get_endgame_phrase(type)

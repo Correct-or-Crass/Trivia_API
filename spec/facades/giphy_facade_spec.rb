@@ -5,15 +5,12 @@ RSpec.describe 'Giphy Facade' do
     context 'responses with gif data count > 0', :vcr do      
       it 'returns an array containing a hash with  url, title, rating key-value pairs' do
         response = GiphyFacade.mean_or_nice("If I throw a stick, will you leave?")
-      
-        expect(response).to be_a(Array)
-        expect(response.count).to eq(1)
-
-        expect(response[0]).to be_a(Hash)
-        expect(response[0].keys).to eq([:url, :title, :rating])
-        expect(response[0][:url]).to be_a(String)
-        expect(response[0][:title]).to be_a(String)
-        expect(response[0][:rating]).to be_a(String)
+            
+        expect(response).to be_a(Hash)
+        expect(response.keys).to eq([:url, :title, :rating])
+        expect(response[:url]).to be_a(String)
+        expect(response[:title]).to be_a(String)
+        expect(response[:rating]).to be_a(String)
       end
     end
 
@@ -21,21 +18,21 @@ RSpec.describe 'Giphy Facade' do
       it "returns a sample from of an 'R' rated gif if service response has one" do
         nsfw_response = GiphyFacade.mean_or_nice("nsfw")
         
-        expect(nsfw_response[0][:rating]).to_not eq("g")
-        expect(nsfw_response[0][:rating]).to_not eq("pg-13")
-        expect(nsfw_response[0][:rating]).to_not eq("pg")
+        expect(nsfw_response[:rating]).to_not eq("g")
+        expect(nsfw_response[:rating]).to_not eq("pg-13")
+        expect(nsfw_response[:rating]).to_not eq("pg")
 
-        expect(nsfw_response[0][:rating]).to eq("r")
+        expect(nsfw_response[:rating]).to eq("r")
       end
 
       it "returns a sample from of an 'PG' rated gif if service response has one but no R or PG-13 gifs" do
         barney_response = GiphyFacade.mean_or_nice("Mother's Day")
 
-        expect(barney_response[0][:rating]).to_not eq("g")
-        expect(barney_response[0][:rating]).to_not eq("pg-13")
-        expect(barney_response[0][:rating]).to_not eq("r")
+        expect(barney_response[:rating]).to_not eq("g")
+        expect(barney_response[:rating]).to_not eq("pg-13")
+        expect(barney_response[:rating]).to_not eq("r")
         
-        expect(barney_response[0][:rating]).to eq("pg")
+        expect(barney_response[:rating]).to eq("pg")
       end
     end
 
