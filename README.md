@@ -112,20 +112,20 @@ Successful response:
 ```
 {
   "data": {
-        "attributes": {
-        "photo": {
+      "attributes": {
+          "photo": {
               "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
               "creator_name": "mmcgregor",
               "creator_link": "https://api.unsplash.com/photos/Ns8trMR4Om8?utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit"
-              },
-        "answer": "Catch",
-        "choices": [
-                "Staircase",
-                "Wood",
-                "Fist",
-                "Catch"
-              ]
-        }
+          },
+          "answer": "Catch",
+          "choices": [
+              "Staircase",
+              "Wood",
+              "Fist",
+              "Catch"
+          ]
+      }
   }
 }
 ```
@@ -141,21 +141,21 @@ Successful response:
 ```
 {
   "data": {
-        "attributes": {
-        "photo": {
+      "attributes": {
+          "photo": {
               "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
               "creator_name": "mmcgregor",
               "creator_link": "https://api.unsplash.com/photos/Ns8trMR4Om8?utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit"
-              },
-        "answer": "Catch",
-        "choices": [
-                "Staircase",
-                "Wood",
-                "Fist",
-                "Catch",
-                "Motorbike"
-              ]
-        }
+          },
+          "answer": "Catch",
+          "choices": [
+              "Staircase",
+              "Wood",
+              "Fist",
+              "Catch",
+              "Motorbike"
+          ]
+      }
   }
 }
 ``` 
