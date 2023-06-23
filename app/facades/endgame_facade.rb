@@ -1,15 +1,16 @@
 class EndgameFacade 
   def self.get_phrase_and_gif(wins, rounds)
-    percentage = score_percentage(wins, rounds)
-    type = find_phrase_type(percentage)
+    perc  = score_percentage(wins, rounds)
+    type  = find_phrase_type(perc)
     phrase = get_endgame_phrase(type)
-    gif = get_endgame_gif(phrase)
+    gif   = get_endgame_gif(phrase)
     
     {phrase: phrase, gif: gif}
   end
 
   def self.get_endgame_phrase(type)
     endgame_phrase = RandomPhraseService.generate_phrase(type)
+    
     if endgame_phrase[:data][:type] == "compliment"
       endgame_phrase[:data][:attributes][:compliment_phrase]
     elsif endgame_phrase[:data][:type] == "insult"

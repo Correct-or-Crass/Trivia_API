@@ -38,7 +38,7 @@ RSpec.describe 'Endgame Facade' do
 
     context '#get_phrase_and_gif response is based on score', :vcr do 
       it 'can return a collection of compliment phrase and gif for winning score' do 
-        wins = 3
+        wins   = 3
         rounds = 5
         phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
         
@@ -55,7 +55,7 @@ RSpec.describe 'Endgame Facade' do
       end  
       
       it 'can return a collection of insult phrase and gif for losing score' do 
-        wins = 1
+        wins   = 1
         rounds = 5
         phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
         

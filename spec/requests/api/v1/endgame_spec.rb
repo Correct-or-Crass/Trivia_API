@@ -5,7 +5,7 @@ RSpec.describe "Endgame" do
   describe "happy path", :vcr do
     context "sucessfule request response" do
       before(:each) do
-        wins = 4
+        wins   = 4
         rounds = 6
         get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
         @parsed_response = Serviceable.parse_json(@response)
