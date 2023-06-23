@@ -94,7 +94,7 @@ This application relies on the following APIs:
 ## APIs
 ___
 This application creates the following API endpoints:
-🗂️ Root Directory: {deployment address tbd}
+🗂️ Root Directory: www.correct-or-crass.com / www.correctorcrass.com
 
 <br>
 
