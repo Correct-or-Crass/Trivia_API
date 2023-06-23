@@ -1,4 +1,4 @@
-class Api::V1::GamePlayApisController < ApplicationController
+class Api::V1::GamePlayController < ApplicationController
   def index 
     @answers = WordFacade.multi_word_search(num_param)
     @photo = PhotoFacade.photos(@answers[0])

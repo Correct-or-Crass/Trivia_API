@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3f46b25cc973b661c28c546663c9aa46"
+      - W/"200a416f677c5e61191c152a4a927ee0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6999a323-aab1-4d97-95e9-82a80d65b006
+      - cd8865a9-ea9b-43bd-9cc4-f38a28749226
       X-Runtime:
-      - '0.003935'
+      - '0.003839'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 16 Jun 2023 16:14:51 GMT
+      - Fri, 23 Jun 2023 13:37:54 GMT
       Content-Length:
-      - '67'
+      - '68'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"100","type":"word","attributes":{"word":"Solar"}}]}'
-  recorded_at: Fri, 16 Jun 2023 16:14:51 GMT
+      string: '{"data":[{"id":"91","type":"word","attributes":{"word":"Service"}}]}'
+  recorded_at: Fri, 23 Jun 2023 13:37:54 GMT
 recorded_with: VCR 6.1.0

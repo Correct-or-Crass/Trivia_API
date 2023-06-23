@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b953d68c0dda43146ba19af0c8c90703"
+      - W/"ba986b9fb64f7513d3445f1ca072cf3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d7722de5-3c6d-4856-92bc-93b521021a4d
+      - 8bda52df-1d4c-46e4-aa08-158c96bcdce5
       X-Runtime:
-      - '0.005143'
+      - '0.004695'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 16 Jun 2023 16:14:51 GMT
+      - Fri, 23 Jun 2023 13:37:54 GMT
       Content-Length:
-      - '238'
+      - '234'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"62","type":"word","attributes":{"word":"Poster"}},{"id":"100","type":"word","attributes":{"word":"Solar"}},{"id":"80","type":"word","attributes":{"word":"Abrasion"}},{"id":"139","type":"word","attributes":{"word":"Log"}}]}'
-  recorded_at: Fri, 16 Jun 2023 16:14:51 GMT
+      string: '{"data":[{"id":"44","type":"word","attributes":{"word":"Dog"}},{"id":"82","type":"word","attributes":{"word":"Jeans"}},{"id":"6","type":"word","attributes":{"word":"Guitar"}},{"id":"118","type":"word","attributes":{"word":"Insult"}}]}'
+  recorded_at: Fri, 23 Jun 2023 13:37:54 GMT
 recorded_with: VCR 6.1.0
