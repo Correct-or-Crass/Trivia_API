@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # resources :trivia, only: :index
   
   namespace :api do
     namespace :v1 do
@@ -11,4 +7,6 @@ Rails.application.routes.draw do
       resources :game_play_apis, only: :index
     end
   end
+  
+  match '*unmatched', to: 'application#route_not_found', via: :all 
 end
