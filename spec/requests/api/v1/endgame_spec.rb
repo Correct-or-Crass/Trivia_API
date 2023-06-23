@@ -29,6 +29,7 @@ RSpec.describe "Endgame" do
         expect(@parsed_response[:data][:attributes][:phrase]).to be_a String
 
         expect(@parsed_response[:data][:attributes][:gif]).to be_a Hash
+        expect(@parsed_response[:data][:attributes][:gif].keys).to eq([:url, :title, :rating])
         @parsed_response[:data][:attributes][:gif].each do |key, value|
           expect(value).to be_a String
         end
