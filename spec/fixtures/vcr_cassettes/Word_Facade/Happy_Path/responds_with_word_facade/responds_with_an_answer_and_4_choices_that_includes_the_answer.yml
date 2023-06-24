@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=4
     body:
       encoding: US-ASCII
       string: ''
@@ -35,24 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"200a416f677c5e61191c152a4a927ee0"
+      - W/"ba986b9fb64f7513d3445f1ca072cf3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cd8865a9-ea9b-43bd-9cc4-f38a28749226
+      - 8bda52df-1d4c-46e4-aa08-158c96bcdce5
       X-Runtime:
-      - '0.003839'
+      - '0.004695'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
       - Fri, 23 Jun 2023 13:37:54 GMT
-
       Content-Length:
-      - '68'
+      - '234'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"91","type":"word","attributes":{"word":"Service"}}]}'
+      string: '{"data":[{"id":"44","type":"word","attributes":{"word":"Dog"}},{"id":"82","type":"word","attributes":{"word":"Jeans"}},{"id":"6","type":"word","attributes":{"word":"Guitar"}},{"id":"118","type":"word","attributes":{"word":"Insult"}}]}'
   recorded_at: Fri, 23 Jun 2023 13:37:54 GMT
 recorded_with: VCR 6.1.0
