@@ -4,7 +4,7 @@ require './././lib/modules/serviceable'
 RSpec.describe "Game Play" do
   context 'happy path testing', :vcr do
     it 'returns a photo, correct answer and a default of 4 choices' do
-      get "/api/v1/game_play_apis"
+      get "/api/v1/game_plays"
 
       expect(response).to be_successful
       expect(response.status).to be 200
@@ -30,7 +30,7 @@ RSpec.describe "Game Play" do
 
     it 'returns a photo, correct answer and specified amount of choices' do
       num = 6
-      get "/api/v1/game_play_apis?num=#{num}"
+      get "/api/v1/game_plays?num=#{num}"
       
       expect(response).to be_successful
       expect(response.status).to be 200
