@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8e405250d12128986dffa5967acc5835"
+      - W/"9ae2b5c78c76fc5b3f8c03895b743ca2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d88ae56f-e273-4284-bf97-fc487aefb755
+      - 7ed414c7-4c55-45a1-a462-330299ae0dab
       X-Runtime:
-      - '0.004799'
+      - '0.004066'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Wed, 21 Jun 2023 04:40:23 GMT
+      - Sat, 24 Jun 2023 13:54:53 GMT
       Content-Length:
-      - '68'
+      - '73'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"18","type":"word","attributes":{"word":"Dolphin"}}]}'
-  recorded_at: Wed, 21 Jun 2023 04:40:23 GMT
+      string: '{"data":[{"id":"102","type":"word","attributes":{"word":"Thermometer"}}]}'
+  recorded_at: Sat, 24 Jun 2023 13:54:53 GMT
 recorded_with: VCR 6.1.0

@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ab144aedc2b56387fca3cc1a15325fcb"
+      - W/"c71172d8f426d7a69ae9b23e27a517c1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 93c1b05c-e8dc-4bd4-81bb-26891d6a615b
+      - 813fd04f-d9f9-4482-bca1-411d46d9e801
       X-Runtime:
-      - '0.012072'
+      - '0.003210'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Wed, 21 Jun 2023 04:40:24 GMT
+      - Sat, 24 Jun 2023 13:54:54 GMT
       Content-Length:
-      - '230'
+      - '234'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"50","type":"word","attributes":{"word":"Fancy"}},{"id":"44","type":"word","attributes":{"word":"Dog"}},{"id":"4","type":"word","attributes":{"word":"Steak"}},{"id":"93","type":"word","attributes":{"word":"Dead"}}]}'
-  recorded_at: Wed, 21 Jun 2023 04:40:23 GMT
+      string: '{"data":[{"id":"125","type":"word","attributes":{"word":"Crab"}},{"id":"92","type":"word","attributes":{"word":"Catch"}},{"id":"71","type":"word","attributes":{"word":"Carpet"}},{"id":"33","type":"word","attributes":{"word":"Dead"}}]}'
+  recorded_at: Sat, 24 Jun 2023 13:54:54 GMT
 recorded_with: VCR 6.1.0

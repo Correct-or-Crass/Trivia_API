@@ -35,23 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c0fa0bc9667c2aeccde5d2d98c8c961b"
+      - W/"564bb93939eeec8efed1561160a585f6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 07b9209d-b7ad-473e-ae0f-6541e21b4d08
+      - 67ade92e-5ee8-4e6d-a3ec-e6b90d213f03
       X-Runtime:
-      - '0.004316'
+      - '0.003199'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Wed, 21 Jun 2023 04:51:43 GMT
+      - Sat, 24 Jun 2023 13:54:54 GMT
       Content-Length:
-      - '354'
+      - '352'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"86","type":"word","attributes":{"word":"Tragedy"}},{"id":"117","type":"word","attributes":{"word":"Requiem"}},{"id":"20","type":"word","attributes":{"word":"Abrasion"}},{"id":"4","type":"word","attributes":{"word":"Steak"}},{"id":"85","type":"word","attributes":{"word":"School"}},{"id":"101","type":"word","attributes":{"word":"Poop"}}]}'
-  recorded_at: Wed, 21 Jun 2023 04:51:42 GMT
+      string: '{"data":[{"id":"50","type":"word","attributes":{"word":"Fancy"}},{"id":"62","type":"word","attributes":{"word":"Poster"}},{"id":"76","type":"word","attributes":{"word":"Magazine"}},{"id":"7","type":"word","attributes":{"word":"Street"}},{"id":"13","type":"word","attributes":{"word":"Plate"}},{"id":"105","type":"word","attributes":{"word":"Shrimp"}}]}'
+  recorded_at: Sat, 24 Jun 2023 13:54:54 GMT
 recorded_with: VCR 6.1.0
