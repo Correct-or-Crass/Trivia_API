@@ -104,7 +104,7 @@ ___
 - Returns a correct answer, 4 words (1 of which is the correct answer) and a photo related to the correct answer
 - Photo contains the image's url, the image owner's name and account link to enable front end to credit image owner if desired
 
-*'GET /api/v1/game_play_apis'*
+*'GET /api/v1/game_plays'*
 
 Successful response:
 
@@ -134,13 +134,14 @@ Successful response:
 ___
 - A number param can be provided to return more or less than the default 4 word choices
 
-*'GET /api/v1/game_play_apis?num=5'*
+*'GET /api/v1/game_plays?num=5'*
 
 Successful response:
 
 ```
 {
   "data": {
+      "type": "game_play",
       "attributes": {
           "photo": {
               "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
