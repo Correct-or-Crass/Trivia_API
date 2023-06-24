@@ -31,9 +31,9 @@
 
 ## Project Status
 ___
-June 22, 2023 update
+June 24, 2023 update
 - [x] Gameplay Controller
-- [ ] Endgame Controller
+- [x] Endgame Controller
 - [ ] ErrorHandling Serializer
 
 ## Mission Statement
