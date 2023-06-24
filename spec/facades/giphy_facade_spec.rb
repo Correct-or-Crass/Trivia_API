@@ -17,21 +17,13 @@ RSpec.describe 'Giphy Facade' do
     context "response adheres to the rating hierarchy, where R > PG/PG-13 > G", :vcr do    
       it "returns a sample from of an 'R' rated gif if service response has one" do
         nsfw_response = GiphyFacade.mean_or_nice("nsfw")
-        
-        expect(nsfw_response[:rating]).to_not eq("g")
-        expect(nsfw_response[:rating]).to_not eq("pg-13")
-        expect(nsfw_response[:rating]).to_not eq("pg")
-
+  
         expect(nsfw_response[:rating]).to eq("r")
       end
 
       it "returns a sample from of an 'PG' rated gif if service response has one but no R or PG-13 gifs" do
         barney_response = GiphyFacade.mean_or_nice("Mother's Day")
 
-        expect(barney_response[:rating]).to_not eq("g")
-        expect(barney_response[:rating]).to_not eq("pg-13")
-        expect(barney_response[:rating]).to_not eq("r")
-        
         expect(barney_response[:rating]).to eq("pg")
       end
     end
