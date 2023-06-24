@@ -1,12 +1,11 @@
 class GamePlaySerializer
-
-  def self.play_response(photo,answer,words)
+  def self.play_response(photo,answer)
     {
      "data": {
             "attributes": {
               "photo": photo,
-              "answer": answer,
-              "choices": words
+              "answer": answer["answer"],
+              "choices": answer["choices"]
             }
      }
     }

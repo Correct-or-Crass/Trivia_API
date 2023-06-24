@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0fb8943b-e53d-400a-91e4-75c49e206856
+      X-Runtime:
+      - '0.054924'
+      Server:
+      - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
+      Date:
+      - Thu, 22 Jun 2023 19:43:01 GMT
+      Content-Length:
+      - '11'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 22 Jun 2023 19:43:01 GMT
+- request:
+    method: get
+    uri: https://api.unsplash.com/search/photos?page=1&per_page=10&query=&utm_campaign=api-credit&utm_medium=referral&utm_source=Trivia_API
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Client-ID
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Connection:
+      - keep-alive
+      Server:
+      - Cowboy
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      X-Powered-By:
+      - hero-app
+      Content-Language:
+      - en
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e5f0f4ed-c8c9-458b-8e38-06f81973fbfa
+      X-Runtime:
+      - '0.027884'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Via:
+      - 1.1 vegur, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 22 Jun 2023 19:43:02 GMT
+      X-Served-By:
+      - cache-iad-kiad7000101-IAD, cache-nyc-kteb1890025-NYC
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1687462982.978487,VS0,VE53
+      Vary:
+      - Accept-Encoding,Authorization,Accept-Language,client-geo-region,Accept
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":["OAuth error: The access token is invalid"]}'
+  recorded_at: Thu, 22 Jun 2023 19:43:02 GMT
+recorded_with: VCR 6.1.0

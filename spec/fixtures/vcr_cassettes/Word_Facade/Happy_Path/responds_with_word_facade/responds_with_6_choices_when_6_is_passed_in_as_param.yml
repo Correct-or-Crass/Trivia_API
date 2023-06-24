@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=
+    uri: https://shielded-headland-00998.herokuapp.com/api/v1/words?amount=6
     body:
       encoding: US-ASCII
       string: ''
@@ -35,24 +35,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"200a416f677c5e61191c152a4a927ee0"
+      - W/"c0fa0bc9667c2aeccde5d2d98c8c961b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cd8865a9-ea9b-43bd-9cc4-f38a28749226
+      - 07b9209d-b7ad-473e-ae0f-6541e21b4d08
       X-Runtime:
-      - '0.003839'
+      - '0.004316'
       Server:
       - WEBrick/1.6.1 (Ruby/2.7.4/2021-07-07)
       Date:
-      - Fri, 23 Jun 2023 13:37:54 GMT
-
+      - Wed, 21 Jun 2023 04:51:43 GMT
       Content-Length:
-      - '68'
+      - '354'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"91","type":"word","attributes":{"word":"Service"}}]}'
-  recorded_at: Fri, 23 Jun 2023 13:37:54 GMT
+      string: '{"data":[{"id":"86","type":"word","attributes":{"word":"Tragedy"}},{"id":"117","type":"word","attributes":{"word":"Requiem"}},{"id":"20","type":"word","attributes":{"word":"Abrasion"}},{"id":"4","type":"word","attributes":{"word":"Steak"}},{"id":"85","type":"word","attributes":{"word":"School"}},{"id":"101","type":"word","attributes":{"word":"Poop"}}]}'
+  recorded_at: Wed, 21 Jun 2023 04:51:42 GMT
 recorded_with: VCR 6.1.0

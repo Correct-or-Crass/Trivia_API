@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe 'Endgame Facade' do
   describe 'Happy Path' do
     context "the game score determines the phrase type (insult or compliment)" do
-      let(:percentage_1) { EndgameFacade.score_percentage(2) }
-      let(:percentage_2) { EndgameFacade.score_percentage(3) }
-      let(:percentage_3) { EndgameFacade.score_percentage(4) }
+      let(:percentage_1) { EndgameFacade.score_percentage(2,5) }
+      let(:percentage_2) { EndgameFacade.score_percentage(3,5) }
+      let(:percentage_3) { EndgameFacade.score_percentage(4,5) }
 
-      it "#score_percentage returns the correct_answers percentage based on the default value of total_questions (5 Qs)" do
+      it "#score_percentage returns the correct_answers percentage based on score argument recieved" do
         expect(percentage_1 && percentage_2 && percentage_3).to be_a Float
         expect(percentage_1).to be <= 60
         expect(percentage_2 && percentage_3).to be >= 60
@@ -36,28 +36,39 @@ RSpec.describe 'Endgame Facade' do
       end
     end
 
-    context 'return results based on score', :vcr do 
+    context '#get_phrase_and_gif response is based on score', :vcr do 
       it 'can return a collection of compliment phrase and gif for winning score' do 
-        wins = 3
+        wins   = 3
         rounds = 5
         phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
         
-        expect(phrase_and_gif).to be_an Array 
-        expect(phrase_and_gif.count).to eq 2 
-        expect(phrase_and_gif.first).to be_a String
-        expect(phrase_and_gif.last).to be_an Array
+        expect(phrase_and_gif).to be_an Hash 
+        expect(phrase_and_gif.keys).to eq([:phrase, :gif])
+        expect(phrase_and_gif[:phrase]).to be_a String
+        
+        expect(phrase_and_gif[:gif]).to be_a Hash
+        expect(phrase_and_gif[:gif].keys).to eq([:url, :title, :rating])
+
+        phrase_and_gif[:gif].each do |key, value|
+          expect(value).to be_a String
+        end
       end  
       
       it 'can return a collection of insult phrase and gif for losing score' do 
-        wins = 1
+        wins   = 1
         rounds = 5
         phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
         
-        expect(phrase_and_gif).to be_an Array 
-        expect(phrase_and_gif.count).to eq 2 
-        expect(phrase_and_gif.first).to be_a String
-        expect(phrase_and_gif.last).to be_an Array
+        expect(phrase_and_gif).to be_an Hash 
+        expect(phrase_and_gif.keys).to eq([:phrase, :gif])
+        expect(phrase_and_gif[:phrase]).to be_a String
         
+        expect(phrase_and_gif[:gif]).to be_a Hash
+        expect(phrase_and_gif[:gif].keys).to eq([:url, :title, :rating])
+        
+        phrase_and_gif[:gif].each do |key, value|
+          expect(value).to be_a String
+        end
       end
     end 
   end

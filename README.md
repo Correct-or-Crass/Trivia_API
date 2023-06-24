@@ -31,9 +31,10 @@
 
 ## Project Status
 ___
-June 3, 2023 update
-- [x] Consume and Test Unsplash API using Unsplash Gem
-- [x] Endgame: Render endgame facade and tests
+June 24, 2023 update
+- [x] Gameplay Controller
+- [x] Endgame Controller
+- [ ] ErrorHandling Serializer
 
 ## Mission Statement
 ___
@@ -92,25 +93,71 @@ This application relies on the following APIs:
 ## APIs
 ___
 This application creates the following API endpoints:
-🗂️ Root Directory: {deployment address tbd}
+🗂️ Root Directory: www.correct-or-crass.com / www.correctorcrass.com
 
 <br>
 
 🔠
-**Words**
 
-*'GET /api/v1/???'*
+**Words**
+___
+- Returns a correct answer, 4 words (1 of which is the correct answer) and a photo related to the correct answer
+- Photo contains the image's url, the image owner's name and account link to enable front end to credit image owner if desired
+
+*'GET /api/v1/game_play_apis'*
 
 Successful response:
 
 ```
 {
   "data": {
+      "attributes": {
+          "photo": {
+              "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
+              "creator_name": "mmcgregor",
+              "creator_link": "https://api.unsplash.com/photos/Ns8trMR4Om8?utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit"
+          },
+          "answer": "Catch",
+          "choices": [
+              "Staircase",
+              "Wood",
+              "Fist",
+              "Catch"
+          ]
       }
+  }
 }
-``` 
+```
 <br>
 
+___
+- A number param can be provided to return more or less than the default 4 word choices
+
+*'GET /api/v1/game_play_apis?num=5'*
+
+Successful response:
+
+```
+{
+  "data": {
+      "attributes": {
+          "photo": {
+              "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
+              "creator_name": "mmcgregor",
+              "creator_link": "https://api.unsplash.com/photos/Ns8trMR4Om8?utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit"
+          },
+          "answer": "Catch",
+          "choices": [
+              "Staircase",
+              "Wood",
+              "Fist",
+              "Catch",
+              "Motorbike"
+          ]
+      }
+  }
+}
+``` 
 🥰
 **Compliment**
 
@@ -157,15 +204,28 @@ Successful response:
 <br>
 
 🏁
-**Endgame Giphy**
+**Endgame**
 
-  *'GET /api/v1/???'*
+A request should include the number of wins and rounds 
+- The default number of wins = 0 and rounds = 5. 
+- It is recommended that wins are passed with the request and number of rounds adjust if different from the default 
+
+`Endpoints Examples`:
+  ### *GET /api/v1/endgame?wins=3*
+  ###  *GET /api/v1/endgame?wins=4&rounds=7*
 
   Successful response:
-
  ```
 {
   "data": {
+          type: "endgame",
+           attributes: {
+                      phrase: "I bet you make babies smile.",
+                      gif: {
+                            url: "https://giphy.com/gifs/sensual-UElLGSOqm8XYI", 
+                            title:"making love GIF", 
+                            rating: "r"
+                            }
       }
 }
 ``` 

@@ -8,9 +8,9 @@ class GiphyFacade
     g_rated   = Array.new
 
     response[:data].each do |gif|
-      r_rated << hash_of_url_title_rating(gif) if gif[:rating] == "r"
+      r_rated  << hash_of_url_title_rating(gif) if gif[:rating] == "r"
       pg_rated << hash_of_url_title_rating(gif) if gif[:rating] == "pg" || gif[:rating] == "pg-13"
-      g_rated << hash_of_url_title_rating(gif) if gif[:rating] == "g"
+      g_rated  << hash_of_url_title_rating(gif) if gif[:rating] == "g"
     end
 
     if r_rated.present?
@@ -23,11 +23,10 @@ class GiphyFacade
   end
 
   def self.hash_of_url_title_rating(data)
-    gif_data = []
-      gif_data << {
-      url:    data[:url].to_json,
-      title:  data[:title].to_json,
-      rating: data[:rating].to_json
+      {
+      url:    data[:url],
+      title:  data[:title],
+      rating: data[:rating]
       }
   end
 
