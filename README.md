@@ -31,10 +31,9 @@
 
 ## Project Status
 ___
-June 14, 2023 update
-- [x] Serviceable incorporated into services
+June 24, 2023 update
 - [x] Gameplay Controller
-- [ ] Endgame Controller
+- [x] Endgame Controller
 - [ ] ErrorHandling Serializer
 
 ## Mission Statement
@@ -99,6 +98,7 @@ This application creates the following API endpoints:
 <br>
 
 🔠
+
 **Words**
 ___
 - Returns a correct answer, 4 words (1 of which is the correct answer) and a photo related to the correct answer
@@ -204,15 +204,28 @@ Successful response:
 <br>
 
 🏁
-**Endgame Giphy**
+**Endgame**
 
-  *'GET /api/v1/???'*
+A request should include the number of wins and rounds 
+- The default number of wins = 0 and rounds = 5. 
+- It is recommended that wins are passed with the request and number of rounds adjust if different from the default 
+
+`Endpoints Examples`:
+  ### *GET /api/v1/endgame?wins=3*
+  ###  *GET /api/v1/endgame?wins=4&rounds=7*
 
   Successful response:
-
  ```
 {
   "data": {
+          type: "endgame",
+           attributes: {
+                      phrase: "I bet you make babies smile.",
+                      gif: {
+                            url: "https://giphy.com/gifs/sensual-UElLGSOqm8XYI", 
+                            title:"making love GIF", 
+                            rating: "r"
+                            }
       }
 }
 ``` 
