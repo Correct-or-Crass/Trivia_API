@@ -111,6 +111,7 @@ Successful response:
 ```
 {
   "data": {
+      "type": "game_play",
       "attributes": {
           "photo": {
               "image_url": "https://images.unsplash.com/photo-1593132517397-ceb31d77194a?ixid=M3w0MTg4MjB8MHwxfHNlYXJjaHw2fHxDYXRjaHxlbnwwfHx8fDE2ODc0NzI2NzN8MA&ixlib=rb-4.0.3&utm_source=Trivia_API&utm_medium=referral&utm_campaign=api-credit",
