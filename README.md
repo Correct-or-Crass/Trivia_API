@@ -31,10 +31,12 @@
 
 ## Project Status
 ___
-June 24, 2023 update
+June 27, 2023 update
 - [x] Gameplay Controller
 - [x] Endgame Controller
 - [ ] ErrorHandling Serializer
+- [ ] Deployment to www.correctorcrass.com
+- [ ] Integration of CI/CD pipeline
 
 ## Mission Statement
 ___
@@ -103,7 +105,7 @@ ___
 - Returns a correct answer, 4 words (1 of which is the correct answer) and a photo related to the correct answer
 - Photo contains the image's url, the image owner's name and account link to enable front end to credit image owner if desired
 
-### *'GET /api/v1/game_plays'*
+### *GET /api/v1/game_plays*
 
 Successful response:
 
@@ -133,7 +135,7 @@ Successful response:
 ___
 - An integer param can be provided to return more or less than the default 4 word choices
 
-### *'GET /api/v1/game_plays?num=5'*
+### *GET /api/v1/game_plays?num=5*
 
 Successful response:
 
@@ -168,8 +170,8 @@ ___
 - A winning endgame requires a 60% or higher correct score ratio
 
 `Endpoints Examples`:
-  ### *'GET /api/v1/endgame?wins=3'*
-  ###  *'GET /api/v1/endgame?wins=4&rounds=7'*
+  ### *GET /api/v1/endgame?wins=3*
+  ###  *GET /api/v1/endgame?wins=4&rounds=7*
 
   Successful response:
  ```
