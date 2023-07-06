@@ -31,10 +31,12 @@
 
 ## Project Status
 ___
-June 24, 2023 update
+June 27, 2023 update
 - [x] Gameplay Controller
 - [x] Endgame Controller
 - [ ] ErrorHandling Serializer
+- [ ] Deployment to www.correctorcrass.com
+- [ ] Integration of CI/CD pipeline
 
 ## Mission Statement
 ___
@@ -93,18 +95,17 @@ This application relies on the following APIs:
 ## APIs
 ___
 This application creates the following API endpoints:
-🗂️ Root Directory: www.correct-or-crass.com / www.correctorcrass.com
 
+🗂️ **Root Directory:** www.correctorcrass.com
 <br>
 
 🔠
-
 **Words**
 ___
 - Returns a correct answer, 4 words (1 of which is the correct answer) and a photo related to the correct answer
 - Photo contains the image's url, the image owner's name and account link to enable front end to credit image owner if desired
 
-*'GET /api/v1/game_plays'*
+### *GET /api/v1/game_plays*
 
 Successful response:
 
@@ -132,9 +133,9 @@ Successful response:
 <br>
 
 ___
-- A number param can be provided to return more or less than the default 4 word choices
+- An integer param can be provided to return more or less than the default 4 word choices
 
-*'GET /api/v1/game_plays?num=5'*
+### *GET /api/v1/game_plays?num=5*
 
 Successful response:
 
@@ -160,57 +161,13 @@ Successful response:
   }
 }
 ``` 
-🥰
-**Compliment**
-
-*'GET /api/v1/???'*
-
-Successful response:
-
-```
-{
-  "data": {
-      }
-}
-```  
-<br>
-
-🤬
-**Insult**
-
-*'GET /api/v1/???'*
-
-Successful response:
-
- ```
-{
-  "data": {
-      }
-}
-```  
-<br>
-
-📸
-**Picture**
-
-  *'GET /api/v1/???'*
-
-  Successful response:
-
- ```
-{
-  "data": {
-      }
-}
-``` 
-<br>
 
 🏁
 **Endgame**
-
-A request should include the number of wins and rounds 
-- The default number of wins = 0 and rounds = 5. 
-- It is recommended that wins are passed with the request and number of rounds adjust if different from the default 
+___
+- A request should include the number of wins and rounds, otherwise a default of wins = 0, rounds = 5 is provided
+- It is recommended that wins are passed with the request and number of rounds adjusted if necessary 
+- A winning endgame requires a 60% or higher correct score ratio
 
 `Endpoints Examples`:
   ### *GET /api/v1/endgame?wins=3*
