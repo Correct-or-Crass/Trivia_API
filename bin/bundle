@@ -14,7 +14,7 @@ m = Module.new do
   module_function
 
   def audit
-    
+    chmod +x bin/*
   end
 
   def invoked_as_script?
