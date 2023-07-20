@@ -1,6 +1,6 @@
 class EndgameFacade 
-  def self.get_phrase_and_gif(wins, rounds)
-    percent  = score_percentage(wins, rounds)
+  def self.get_phrase_and_gif(number_param)
+    percent  = score_percentage(number_param[0],number_param[-1])
     type  = find_phrase_type(percent)
     phrase = get_endgame_phrase(type)
     gif   = get_endgame_gif(phrase)

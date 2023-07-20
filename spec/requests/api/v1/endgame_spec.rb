@@ -68,4 +68,14 @@ RSpec.describe "Endgame" do
 
     end
   end
+
+  describe "sad path", :vcr do
+  
+    it "evaluates the parms to confirm they are integers" do
+      wins   = "d"
+      rounds = 6
+      get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
+      @parsed_response = Serviceable.parse_json(@response)
+    end
+  end
 end
