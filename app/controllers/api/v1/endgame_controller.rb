@@ -9,14 +9,13 @@ class Api::V1::EndgameController < ApplicationController
 
   
   def number_param
-    if
-      # require 'pry';binding.pry
-      (params[:wins].to_i.integer? && params[:rounds].to_i.integer?) && (params[:wins].to_i <=  params[:rounds].to_i)
+    begin
+      (Integer(params[:wins]) <= Integer(params[:rounds]))
         wins   = params[:wins].to_i || 0
         rounds = params[:rounds].to_i || 5
         return [wins, rounds]
       # end
-    else# => exception
+    rescue => exception
       require 'pry';binding.pry
     end
   end
