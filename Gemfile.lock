@@ -123,8 +123,6 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jsonapi-serializer (2.2.0)
-      activesupport (>= 4.2)
     jwt (2.7.0)
     launchy (2.5.2)
       addressable (~> 2.8)
@@ -155,6 +153,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.15.1-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.1-x86_64-linux)
       racc (~> 1.4)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
@@ -267,6 +267,7 @@ GEM
 PLATFORMS
   x86_64-darwin-21
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -278,7 +279,6 @@ DEPENDENCIES
   faraday
   figaro
   jbuilder
-  jsonapi-serializer
   launchy
   orderly
   pg (~> 1.1)
