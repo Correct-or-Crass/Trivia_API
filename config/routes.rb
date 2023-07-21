@@ -7,6 +7,6 @@ Rails.application.routes.draw do
       resources :endgame, only: :index
     end
   end
-  get '*other', to: 'home#index'
+  get '/', to: 'home#index'
   match '*unmatched', to: 'application#route_not_found', via: :all 
 end
