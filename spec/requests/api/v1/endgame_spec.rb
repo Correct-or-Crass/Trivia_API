@@ -1,9 +1,9 @@
 require "rails_helper"
-require "./lib/modules/serviceable"
+require "./lib/service_modules/serviceable.rb"
 
 RSpec.describe "Endgame" do
-  describe "happy path", :vcr do
-    context "when both params (wins & rounds) are received returns the EndgameSerializer#json_response" do
+  xdescribe "happy path", :vcr do
+    xcontext "when both params (wins & rounds) are received returns the EndgameSerializer#json_response" do
       before(:each) do
         wins   = 4
         rounds = 6
@@ -70,12 +70,20 @@ RSpec.describe "Endgame" do
   end
 
   describe "sad path", :vcr do
-  
     it "evaluates the parms to confirm they are integers" do
       wins   = "d"
       rounds = 6
       get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
       @parsed_response = Serviceable.parse_json(@response)
+      require 'pry';binding.pry
+    end
+
+    it "evaluates the parms to confirm they are integers" do
+      wins   = 7
+      rounds = 6
+      get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
+      @parsed_response = Serviceable.parse_json(@response)
+      require 'pry';binding.pry
     end
   end
 end

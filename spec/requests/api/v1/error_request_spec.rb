@@ -1,5 +1,5 @@
 require "rails_helper"
-require "./lib/modules/serviceable"
+require "./lib/service_modules/serviceable.rb"
 
 RSpec.describe "Error Requests" do
   describe "#route_not_found captures any invalid url" do

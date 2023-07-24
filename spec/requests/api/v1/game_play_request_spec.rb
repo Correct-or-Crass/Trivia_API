@@ -1,5 +1,5 @@
 require "rails_helper"
-require "./lib/modules/serviceable"
+require "./lib/service_modules/serviceable.rb"
 
 RSpec.describe "Game Play" do
   context "happy path testing", :vcr do
