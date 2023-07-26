@@ -39,15 +39,15 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "correctorcrass-be" #Must be unique in Heroku
-          heroku_email: "bflanagan22@turing.edu"
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
+  #       with:
+  #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+  #         heroku_app_name: "correctorcrass-be" #Must be unique in Heroku
+  #         heroku_email: "bflanagan22@turing.edu"
   lint:
     runs-on: ubuntu-latest
     steps:
