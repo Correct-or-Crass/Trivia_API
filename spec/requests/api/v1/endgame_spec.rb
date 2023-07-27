@@ -1,14 +1,13 @@
 require "rails_helper"
-require "./lib/service_modules/serviceable.rb"
 
 RSpec.describe "Endgame" do
-  xdescribe "happy path", :vcr do
-    xcontext "when both params (wins & rounds) are received returns the EndgameSerializer#json_response" do
+  describe "happy path", :vcr do
+    context "when both params (wins & rounds) are received returns the EndgameSerializer#json_response" do
       before(:each) do
         wins   = 4
         rounds = 6
         get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
-        @parsed_response = Serviceable.parse_json(@response)
+        @parsed_response = return_parsed_symbolized_data(@response)
       end
 
       it "confirms the response status, and top and second level keys and value datatypes" do
@@ -41,7 +40,7 @@ RSpec.describe "Endgame" do
         wins = 2
         get "/api/v1/endgame?wins=#{wins}"
 
-        parsed_response = Serviceable.parse_json(response)
+        parsed_response = return_parsed_symbolized_data(response)
 
         expect(response.status).to eq(200)
         
@@ -55,7 +54,7 @@ RSpec.describe "Endgame" do
       it "affirms default wins & rounds count are used NO params are recieved - (cruel version of client game)" do
         get "/api/v1/endgame"
 
-        parsed_response = Serviceable.parse_json(response)
+        parsed_response = return_parsed_symbolized_data(response)
 
         expect(response.status).to eq(200)
         
@@ -70,19 +69,33 @@ RSpec.describe "Endgame" do
   end
 
   describe "sad path", :vcr do
-    it "evaluates the parms to confirm they are integers" do
+    it "returns an error with message if params are not integers" do
       wins   = "d"
       rounds = 6
       get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
-      @parsed_response = Serviceable.parse_json(@response)
-      require 'pry';binding.pry
+      parsed_response = return_parsed_symbolized_data(response)
+
+      expect(parsed_response).to be_a Hash
+      expect(parsed_response.keys).to eq([:errors])
+
+      expect(parsed_response[:errors]).to be_a Array
+      expect(parsed_response[:errors].count).to eq(1)
+      expect(parsed_response[:errors][0]).to be_a Hash
+
+      expect(parsed_response[:errors][0].keys).to eq([:title, :detail, :status, :source])
+      
+      expect(parsed_response[:errors][0][:title]).to eq("Bad Request")
+      expect(parsed_response[:errors][0][:detail]).to eq("invalid value for Integer(): \"d\"")
+      expect(parsed_response[:errors][0][:status]).to eq("400")
+      expect(parsed_response[:errors][0][:source]).to eq(:pointer=>request.original_fullpath)
     end
 
     it "evaluates the parms to confirm they are integers" do
       wins   = 7
       rounds = 6
       get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
-      @parsed_response = Serviceable.parse_json(@response)
+      @parsed_response = return_parsed_symbolized_data(response)
+
       require 'pry';binding.pry
     end
   end
