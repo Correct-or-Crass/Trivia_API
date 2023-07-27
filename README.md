@@ -31,12 +31,12 @@
 
 ## Project Status
 ___
-June 27, 2023 update
+July 27, 2023 update
 - [x] Gameplay Controller
 - [x] Endgame Controller
 - [ ] ErrorHandling Serializer
-- [ ] Deployment to www.correctorcrass.com
-- [ ] Integration of CI/CD pipeline
+- [x] Deployment to www.correctorcrass.com
+- [x] Integration of CI/CD pipeline using GitHub Actions
 
 ## Mission Statement
 ___
