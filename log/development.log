@@ -564,3 +564,10 @@ Processing by Api::V1::WordsController#index as */*
 Completed 204 No Content in 394ms (ActiveRecord: 0.0ms | Allocations: 1041)
 
 
+Started GET "/favicon.ico" for ::1 at 2023-07-27 13:43:19 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#route_not_found as */*
+  Parameters: {"unmatched"=>"favicon"}
+Completed 400 Bad Request in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 389)
+
+

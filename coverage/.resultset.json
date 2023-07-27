@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/facades/giphy_facade_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/facades/giphy_facade_spec.rb": {
         "lines": [
           1,
           null,
@@ -63,7 +63,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/facades/photo_facade_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/facades/photo_facade_spec.rb": {
         "lines": [
           1,
           null,
@@ -86,7 +86,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/facades/word_facade_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/facades/word_facade_spec.rb": {
         "lines": [
           1,
           null,
@@ -121,7 +121,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/requests/api/v1/endgame_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/requests/api/v1/endgame_spec.rb": {
         "lines": [
           1,
           1,
@@ -196,7 +196,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/lib/modules/serviceable.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/lib/modules/serviceable.rb": {
         "lines": [
           1,
           1,
@@ -215,7 +215,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/requests/api/v1/game_play_request_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/requests/api/v1/game_play_request_spec.rb": {
         "lines": [
           1,
           1,
@@ -261,7 +261,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/requests/error_request_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/requests/error_request_spec.rb": {
         "lines": [
           1,
           1,
@@ -308,7 +308,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/requests/welcome_request_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/requests/welcome_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -328,7 +328,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/services/giphy_service_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/services/giphy_service_spec.rb": {
         "lines": [
           1,
           null,
@@ -380,7 +380,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/services/random_phrase_service_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/services/random_phrase_service_spec.rb": {
         "lines": [
           1,
           null,
@@ -437,7 +437,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/spec/services/words_service_spec.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/spec/services/words_service_spec.rb": {
         "lines": [
           1,
           null,
@@ -478,7 +478,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/facades/endgame_facade.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/facades/endgame_facade.rb": {
         "lines": [
           1,
           1,
@@ -518,7 +518,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/services/random_phrase_service.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/services/random_phrase_service.rb": {
         "lines": [
           1,
           null,
@@ -530,7 +530,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/facades/giphy_facade.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/facades/giphy_facade.rb": {
         "lines": [
           1,
           1,
@@ -578,7 +578,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/services/giphy_service.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/services/giphy_service.rb": {
         "lines": [
           1,
           null,
@@ -600,7 +600,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/facades/photo_facade.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/facades/photo_facade.rb": {
         "lines": [
           1,
           1,
@@ -614,7 +614,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/facades/word_facade.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/facades/word_facade.rb": {
         "lines": [
           1,
           1,
@@ -636,7 +636,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/services/word_service.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/services/word_service.rb": {
         "lines": [
           1,
           null,
@@ -653,7 +653,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/controllers/api/v1/endgame_controller.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/controllers/api/v1/endgame_controller.rb": {
         "lines": [
           1,
           1,
@@ -666,7 +666,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/controllers/application_controller.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -674,7 +674,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/lib/modules/errors/error_handler.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/lib/modules/errors/error_handler.rb": {
         "lines": [
           1,
           null,
@@ -688,7 +688,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/lib/modules/errors/error_serializer.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/lib/modules/errors/error_serializer.rb": {
         "lines": [
           1,
           1,
@@ -709,7 +709,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/serializers/endgame_serializer.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/serializers/endgame_serializer.rb": {
         "lines": [
           1,
           1,
@@ -726,7 +726,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/controllers/api/v1/game_plays_controller.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/controllers/api/v1/game_plays_controller.rb": {
         "lines": [
           1,
           1,
@@ -746,7 +746,7 @@
           null
         ]
       },
-      "/Users/bryanflanagan/Documents/GitHub/Trivia_API/app/serializers/game_play_serializer.rb": {
+      "/Users/bryanflanagan/turing_work/5mod/projects/Trivia_API/app/serializers/game_play_serializer.rb": {
         "lines": [
           1,
           1,
@@ -765,6 +765,6 @@
         ]
       }
     },
-    "timestamp": 1689972520
+    "timestamp": 1690485776
   }
 }
