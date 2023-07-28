@@ -1,5 +1,4 @@
 require "rails_helper"
-require "./lib/service_modules/serviceable.rb"
 
 RSpec.describe "Game Play" do
   context "happy path testing", :vcr do
@@ -8,7 +7,7 @@ RSpec.describe "Game Play" do
 
       expect(response).to be_successful
       expect(response.status).to be 200
-      parse = Serviceable.parse_json(response)[:data][:attributes]
+      parse = return_parsed_symbolized_data(response)[:data][:attributes]
       expect(parse).to be_a Hash
       expect(parse).to have_key (:photo)
       expect(parse[:photo]).to be_a Hash
@@ -35,7 +34,7 @@ RSpec.describe "Game Play" do
       expect(response).to be_successful
       expect(response.status).to be 200
 
-      parse = Serviceable.parse_json(response)[:data][:attributes]
+      parse = return_parsed_symbolized_data(response)[:data][:attributes]
       expect(parse[:choices].length).to eq (6)
     end
   end
