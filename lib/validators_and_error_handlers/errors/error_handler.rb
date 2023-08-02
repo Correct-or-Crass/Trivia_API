@@ -3,6 +3,7 @@ require "./lib/validators_and_error_handlers/errors/error_serializer.rb"
 module ValidatorsAndErrorHandlers
   module Errors
     module ErrorHandler
+      
       def route_not_found
         detail_message = params[:action].split("_").join(" ")
         status_code = 400
@@ -15,6 +16,10 @@ module ValidatorsAndErrorHandlers
         status_code = 400
         source_info = request.original_fullpath
         ErrorSerializer.bad_request(detail_message, status_code, source_info)
+      end
+
+      def error_hash(error)
+        { errors: error }
       end
     end 
   end 

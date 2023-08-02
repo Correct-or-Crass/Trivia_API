@@ -23,9 +23,8 @@ module TriviaApi
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('lib') #loads lib directory into application_controller.rb
     config.autoload_paths << "#{Rails.root}/app/controllers"
-
 
     # Configuration for the application, engines, and railties goes here.
     #

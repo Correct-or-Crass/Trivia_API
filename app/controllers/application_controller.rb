@@ -1,4 +1,4 @@
-require "./lib/modules/errors/error_handler.rb"
 class ApplicationController < ActionController::API
-  include ErrorHandler
+  include ValidatorsAndErrorHandlers::Validators::ParamValidator
+  include ValidatorsAndErrorHandlers::Errors::ErrorHandler
 end
