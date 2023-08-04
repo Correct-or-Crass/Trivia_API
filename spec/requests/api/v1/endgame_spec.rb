@@ -95,7 +95,7 @@ RSpec.describe "Endgame" do
         expect(parsed_response[:errors][0][:source]).to eq(:pointer=>request.original_fullpath)
       end
 
-      it "resets the rounds value to 10 if rounds param is > 10 and wins within threshold" do
+      it "returns an error message if rounds value > 10" do
         wins   = 11
         rounds = 18
         get "/api/v1/endgame?wins=#{wins}&rounds=#{rounds}"
