@@ -14,16 +14,15 @@ module ValidatorsAndErrorHandlers
       end
 
       def convert_valid_param_to_integers
-        wins = get_integer_or_error(params[:wins]) unless params[:wins].nil? 
-        rounds = get_integer_or_error(params[:rounds]) unless params[:rounds].nil? 
-        
+        wins   = params[:wins].nil?   ? 0 : get_integer_or_error(params[:wins])
+        rounds = params[:rounds].nil? ? 5 : get_integer_or_error(params[:rounds])
+
         if wins.is_a?(ArgumentError) || rounds.is_a?(ArgumentError)
           errors = Array.new
           errors.push(wins) unless wins.is_a?(Integer)
           errors.push(rounds) unless rounds.is_a?(Integer)
-        else
-          wins = 0 if wins.nil? 
-          rounds = 5 if rounds.nil?
+        elsif (rounds > 10)
+          return error_hash(["Rounds (#{rounds}) must not exceed 10"])
         end
         
         unless errors.present?
@@ -43,12 +42,11 @@ module ValidatorsAndErrorHandlers
 
       def evaluate_wins_to_rounds(wins, rounds)
         if wins > rounds
-          return  error_hash(["Wins must be less than or equal to Rounds"])
+          error_hash(["Wins (#{wins}) must be less than or equal to Rounds (#{rounds})"])
         else
-          return { score: [wins, rounds] }
+          { score: [wins, rounds] }
         end        
       end
-
     end 
   end
 end

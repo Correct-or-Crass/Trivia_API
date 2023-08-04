@@ -40,7 +40,8 @@ RSpec.describe 'Endgame Facade' do
       it 'can return a collection of compliment phrase and gif for winning score' do 
         wins   = 3
         rounds = 5
-        phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
+        wins_rounds_array = [wins, rounds]
+        phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins_rounds_array)
         
         expect(phrase_and_gif).to be_an Hash 
         expect(phrase_and_gif.keys).to eq([:phrase, :gif])
@@ -57,7 +58,8 @@ RSpec.describe 'Endgame Facade' do
       it 'can return a collection of insult phrase and gif for losing score' do 
         wins   = 1
         rounds = 5
-        phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins, rounds)
+        wins_rounds_array = [wins, rounds]
+        phrase_and_gif = EndgameFacade.get_phrase_and_gif(wins_rounds_array)
         
         expect(phrase_and_gif).to be_an Hash 
         expect(phrase_and_gif.keys).to eq([:phrase, :gif])

@@ -1,22 +1,17 @@
 class Api::V1::EndgameController < ApplicationController
   def index
-    number_param
-    require 'pry';binding.pry
-    data   = EndgameFacade.get_phrase_and_gif(number_param)
-    
-    render json: EndgameSerializer.json_response(data)
-  end
+    evaluated_input = convert_valid_param_to_integers
 
+    if evaluated_input[:score].present?
+      data = EndgameFacade.get_phrase_and_gif(evaluated_input[:score]) 
+    elsif evaluated_input[:errors]
+      error_message = evaluated_input[:errors]
+    end
   
-  def number_param
-    begin
-      (Integer(params[:wins]) <= Integer(params[:rounds]))
-        wins   = params[:wins].to_i || 0
-        rounds = params[:rounds].to_i || 5
-        return [wins, rounds]
-      # end
-    rescue => exception
-      require 'pry';binding.pry
+    if data.present?
+      render json: EndgameSerializer.json_response(data)
+    else
+      render json: invalid_param_value(error_message), status: :bad_request
     end
   end
 end

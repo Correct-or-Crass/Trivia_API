@@ -1,4 +1,5 @@
 class EndgameFacade 
+
   def self.get_phrase_and_gif(number_param)
     percent  = score_percentage(number_param[0],number_param[-1])
     type  = find_phrase_type(percent)
