@@ -8,6 +8,7 @@ RSpec.describe "Game Play" do
 
       expect(response).to be_successful
       expect(response.status).to be 200
+
       parse = Serviceable.parse_json(response)[:data][:attributes]
       expect(parse).to be_a Hash
       expect(parse).to have_key (:photo)
