@@ -64,20 +64,18 @@ jobs:
       #   run: bin/brakeman -q -w2
       # - name: Lint Ruby files
       #   run: bin/rubocop --parallel
-  name: Deploy
-
-  on:
-    push:
-      branches:
-        - main
-
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v1
-      - uses: Correct-or-Crass/heroku-deploy@v3.2.2 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "correctorcrass-be" #Must be unique in Heroku
-          heroku_email: "bflanagan22@turing.edu"
+    name: Deploy
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v3
+        - uses: Correct-or-Crass/heroku-deploy@v3.2.2 # This is the action
+          with:
+            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+            heroku_app_name: "correctorcrass-be" #Must be unique in Heroku
+            heroku_email: "bflanagan22@turing.edu"
