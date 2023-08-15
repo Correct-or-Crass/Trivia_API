@@ -14,9 +14,9 @@ module ValidatorsAndErrorHandlers
       end
 
       def convert_valid_param_to_integers
-        wins = set_value(params[:wins])
-        rounds = set_value(params[:rounds])
-
+        wins = wins_or_default_value
+        rounds = rounds_or_default_value
+        
         if wins.is_a?(ArgumentError) || rounds.is_a?(ArgumentError)
           errors = Array.new
           errors.push(wins) unless wins.is_a?(Integer)
@@ -32,13 +32,20 @@ module ValidatorsAndErrorHandlers
         end
       end
 
-      def set_value(param)
-        if param.nil? 
-          param = 5
-        else 
-          param = get_integer_or_error(param)
+      def wins_or_default_value
+        if params[:wins].nil? 
+          0
+        else
+          get_integer_or_error(params[:wins])
         end
-        param
+      end
+
+      def rounds_or_default_value
+        if params[:rounds].nil? 
+          5
+        else
+          get_integer_or_error(params[:rounds])
+        end
       end
 
       def get_integer_or_error(param)
