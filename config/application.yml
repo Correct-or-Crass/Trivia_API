@@ -9,8 +9,3 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
-giphy_api_key: jZM6kQ1cNOOp9eOG9qZcvhpWIu6L0D0w
-
-#unsplash docs: https://unsplash.com/documentation#getting-started
-unsplash_client_id_key: Fv6bUOMRufZQ0pYWcrPIYrGCL03ZT3AZTYTwtwfDBn4
-# unsplash_secret_key: wwrKjUFSnXxqphJsSCI2nvrxVL1Snfkd3FvzEfmi50o
