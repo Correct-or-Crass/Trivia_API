@@ -1,5 +1,3 @@
-require "./lib/service_modules/serviceable.rb"
-
 class GiphyService
   extend ServiceModules::Serviceable
   

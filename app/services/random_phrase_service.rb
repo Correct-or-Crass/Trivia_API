@@ -1,5 +1,3 @@
-require "./lib/service_modules/serviceable.rb"
-
 class RandomPhraseService 
     extend ServiceModules::Serviceable
      

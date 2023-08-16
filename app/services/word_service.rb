@@ -1,4 +1,3 @@
-require "./lib/service_modules/serviceable.rb"
 class WordService
   extend ServiceModules::Serviceable
 
