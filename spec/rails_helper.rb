@@ -10,6 +10,9 @@ require 'rspec/rails'
 require 'simplecov'
 SimpleCov.start
 
+def return_parsed_symbolized_data(response)
+  JSON.parse(response.body, symbolize_names: true)
+end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are

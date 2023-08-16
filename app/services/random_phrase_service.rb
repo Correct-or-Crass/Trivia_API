@@ -1,8 +1,8 @@
-require "./lib/modules/serviceable.rb"
-
 class RandomPhraseService 
+    extend ServiceModules::Serviceable
+     
     def self.generate_phrase(type)
-        response = Serviceable.phrases_words_connection.get("api/v1/#{type}")
-        Serviceable.parse_json(response) 
+        response = phrases_words_connection.get("api/v1/#{type}")
+        parse_json(response) 
     end
-end
+end 
