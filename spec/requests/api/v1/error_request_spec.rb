@@ -1,5 +1,4 @@
 require "rails_helper"
-require "./lib/modules/serviceable"
 
 RSpec.describe "Error Requests" do
   describe "#route_not_found captures any invalid url" do
@@ -8,7 +7,7 @@ RSpec.describe "Error Requests" do
         get "/api/v1/game_play_apissssss"
         expect(response.status).to eq(400)
         
-        parsed_response = Serviceable.parse_json(response)
+        parsed_response = return_parsed_symbolized_data(response)
     
         expect(parsed_response).to be_a(Hash)
         expect(parsed_response.keys).to eq([:errors])
@@ -31,7 +30,7 @@ RSpec.describe "Error Requests" do
       it "response includes detailed informaiton about the error" do 
         get "/api/v11/gameplay"
         
-        parsed_response = Serviceable.parse_json(response)
+        parsed_response = return_parsed_symbolized_data(response)
 
         expect(parsed_response[:errors][0][:title]).to eq("Bad Request")
         expect(parsed_response[:errors][0][:detail]).to eq("route not found")
